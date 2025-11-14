@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hablar ahora</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <nav class="topheader">
+            <a href="../index.html" class="logo">
+            <img height="120" width="200" src="../img/logoAmpara.png" alt="Logo" />
+            <h1>AMPARA</h1>
+            </a>
+
+            <a href="../SOS/sos.html" class="btn-sos">SOS</a>
+            <ul class="menu-horizontal">
+                <li><a href="../hablar/hablar.html">Hablar ahora</a></li>
+                <li><a href="../servicios/servicios.html">Servicios</a></li>
+                <li><a href="../noticias/noticias.html">Noticias</a></li>
+                <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+            </ul>
+            <a href="#" class="btn-cuenta">
+                Mi cuenta
+                <img src="../img/mi-cuenta-boton.png" alt="mi cuenta boton">
+            </a>
+        </nav>
+
+        <section class="seccion-foro">
+            <div class="div-foro">
+                <h1>Foro anónimo</h1>
+                <p>Comparte experiencias y recibe apoyo sin revelar tu identidad</p>
+
+                <!-- Filtros principales -->
+                <div class="filtros-foro">
+                    <button class="btn-filtro">Apoyo emocional</button>
+                    <button class="btn-filtro">Asesoría legal</button>
+                    <button class="btn-filtro">Recursos en tu distrito</button>
+                    <button class="btn-filtro">Preguntas</button>
+
+                    <div class="div-busqueda">
+                        <input type="text" placeholder="Buscar por..." />
+                        <button class="btn-busqueda">
+                            <img src="../img/busqueda.png" alt="busqueda"/>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Caja para escribir mensaje -->
+                <div class="contenedor-mensaje">
+                    <input
+                        type="text"
+                        placeholder="Escribe tu mensaje (no compartas datos personales)"
+                    />
+                    <button class="btn-publicar">Publicar</button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab">Recientes</button>
+                    <button class="tab">Populares</button>
+                    <button class="tab">Sin responder</button>
+                    <button class="tab">Cerca de mi</button>
+                </div>
+            </div>
+        
+
+            <!-- CONTENEDOR FORO + BARRA DERECHA -->
+            <div class="layout">
+                <!-- LISTA DE POSTS -->
+                <div class="div-publicacion">
+                    <!-- Post 1 -->
+                    <article class="card-pub">
+                        <div class="avatar-pub">
+                            <div class="circulo-avatar">
+                                <img src="../img/icono-usuario.png" alt="avatar"/>
+                            </div>
+                        </div>
+
+                        <div class="contenido-pub">
+                            <div class="header-pub">
+                                <h4>Anonimo #45</h4>
+                            </div>
+
+                            <p>
+                                Mis días eran grises. A veces me ocupaba tanto en los deberes que me
+                                olvidaba de mí misma, si alguna tiene una experiencia similar, puede
+                                compartir cómo lo superó
+                            </p>
+
+                            <div class="btn-acciones-pub">
+                                <button class="link">Responder</button>
+                                <button class="link">Reacción ♡</button>
+                                <button class="link">Reportar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card-pub">
+                        <div class="avatar-pub">
+                            <div class="circulo-avatar">
+                                <img src="../img/icono-usuario.png" alt="avatar"/>
+                            </div>
+                        </div>
+
+                        <div class="contenido-pub">
+                            <div class="header-pub">
+                                <h4>Anonimo #40</h4>
+                            </div>
+
+                            <p>
+                                Alguna que me pueda brindar ayuda de asesoria legal porfavor
+                            </p>
+
+                            <div class="btn-acciones-pub">
+                                <button class="link">Responder</button>
+                                <button class="link">Reacción ♡</button>
+                                <button class="link">Reportar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                </div>
+
+                <!-- BARRA DERECHA: NORMAS -->
+                <aside class="normas">
+                    <h2>Normas del foro</h2>
+                    <ul class="rules">
+                        <li>No compartas datos personales.</li>
+                        <li>Respeta el anonimato de otras personas.</li>
+                        <li>Evita lenguaje ofensivo o discriminatorio.</li>
+                        <li>Este espacio no reemplaza atención de emergencia.</li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>    
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="../politica/politica.html">Políticas de privacidad</a>
+                <a href="../terminos/terminos.html">Términos</a>
+            </div>
+
+            <div class="footer-redes">
+                <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
+                <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
+                <a href="#"><img src="../img/instagram.png" alt="instagram" /></a>
+                <a href="#"><img src="../img/youtube.png" alt="youTube" /></a>
+            </div>
+        </footer>
+
+    </body>
+</html>
