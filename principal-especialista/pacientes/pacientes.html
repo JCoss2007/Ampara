@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hablar ahora</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <nav class="topheader">
+            <a href="../index.html" class="logo">
+                <img height="120" width="200" src="../img/logoAmpara.png" alt="Logo" />
+                <h1>AMPARA</h1>
+            </a>
+
+            <ul class="menu-horizontal">
+                <li><a href="">Mensajes</a></li>
+                <li><a href="../pacientes/pacientes.html">Pacientes</a></li>
+                <li><a href="../noticias/noticias.html">Noticias</a></li>
+                <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+            </ul>
+            <a href="#" class="btn-cuenta">
+                Mi cuenta
+                <img src="../img/mi-cuenta-boton.png" alt="mi cuenta boton">
+            </a>
+        </nav>
+
+        <section class="seccion-pac">
+            <div class="contenedor-pac">
+                <table class="tabla-pacientes">
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Estado</th>
+                            <th>Última sesión</th>
+                            <th>Modalidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Anónimo - 140</td>
+                            <td>
+                                <span class="estado-tag estado-nuevo">Nuevo</span>
+                            </td>
+                            <td>10 septiembre</td>
+                            <td>Chat</td>
+                            <td>
+                                <button class="btn-chat">Abrir chat</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Anónimo - 141</td>
+                            <td>
+                                <span class="estado-tag estado-proceso">En proceso</span>
+                            </td>
+                            <td>1 septiembre</td>
+                            <td>Llamada</td>
+                            <td>
+                                <button class="btn-chat">Abrir chat</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Anónimo - 142</td>
+                            <td>
+                                <span class="estado-tag estado-sos">Alerta SOS</span>
+                            </td>
+                            <td>22 agosto</td>
+                            <td>Chat</td>
+                            <td>
+                                <button class="btn-chat">Abrir chat</button>
+                            </td>
+                        </tr>
+
+                        <!-- Filas vacías para que se parezca al diseño -->
+                        <tr><td colspan="5">&nbsp;</td></tr>
+                        <tr><td colspan="5">&nbsp;</td></tr>
+                        <tr><td colspan="5">&nbsp;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="../politica/politica.html">Políticas de privacidad</a>
+                <a href="../terminos/terminos.html">Términos</a>
+            </div>
+
+            <div class="footer-redes">
+                <a href="#"><img src="../img/facebook.png" alt="facebook" /></a>
+                <a href="#"><img src="../img/twitter.png" alt="twitter" /></a>
+                <a href="#"><img src="../img/instagram.png" alt="instagram" /></a>
+                <a href="#"><img src="../img/youtube.png" alt="youTube" /></a>
+            </div>
+        </footer>
+
+    </body>
+</html>
