@@ -1,0 +1,36 @@
+# ===============================
+# Archivos de sistema
+# ===============================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===============================
+# Editores y entornos
+# ===============================
+# Visual Studio Code
+.vscode/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ===============================
+# Archivos temporales o logs
+# ===============================
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ===============================
+# Carpetas de construcción (si las llegas a usar)
+# ===============================
+dist/
+build/

@@ -1,0 +1,394 @@
+.topheader {
+  position: static;
+  background-color: #fcf8fc;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img {
+  height: 100px;
+  width: auto;
+  margin-right: -50px;
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+
+.logo h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  color: #482983;
+  margin: 0;
+  margin-left: -20px;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-horizontal li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+
+
+}
+
+.btn-sos {
+  background-color: #f0536b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 100px;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 50px;
+  white-space: nowrap;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+.btn-cuenta img{
+  width: 27px;
+  height: auto;
+  position: relative;
+  right: 6px;
+  top: 6px;
+}
+
+.menu-horizontal li a:hover {
+  color: white;
+  background-color: black;
+}
+
+/*Seccion Servicios*/
+.seccion-servicios {
+  padding-top: 6rem;
+  background-color: #482983;
+}
+
+.seccion-servicios h2 {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 75px;
+  bottom: 7rem;
+  padding-left: 4rem;
+}
+
+.servicios-contenido {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: -130px;
+}
+
+.servicio1 {
+  flex: 1;
+  height: 692px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url("../img/servicio-ayuda.png");
+}
+
+.servicio1-contenido {
+  background-color: #ffffff;
+  width: 100%;
+  height: 23%;
+  padding: 10px;
+  text-align: left;
+  justify-content: flex-start;
+  margin-right: 8rem;
+}
+
+.servicio1-texto {
+  position: relative;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #39225A;
+  margin-left: 1.5rem;
+  margin-top: -1rem;
+}
+
+.servicio1-boton {
+  background-color: #DDCDE9;
+  color: #68459F;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  margin-left: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  top: 0.5rem;
+}
+
+.servicio2 {
+  flex: 1;
+  height: 692px;
+  background-image: url("../img/servicio-acompañamiento.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.servicio2-contenido {
+  background-color: #ffffff;
+  width: 100%;
+  height: 23%;
+  padding: 10px;
+  text-align: left;
+  justify-content: flex-start;
+  margin-right: 8rem;
+}
+
+.servicio2-texto {
+  position: relative;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #39225A;
+  margin-left: 1.5rem;
+  margin-top: -1rem;
+}
+
+.servicio2-boton {
+  background-color: #DDCDE9;
+  color: #68459F;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  margin-left: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  top: 0.5rem;
+}
+
+/*Seccion servicio-ayuda*/
+.seccion-servicio-ayuda {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.servicio-ayuda-titulo {
+  padding-top: 13rem;
+  height: 100%;
+  width: auto;
+  background-image: url(../img/servicio-ayuda-alt.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+}
+
+.seccion-servicio-ayuda h2 {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 600;
+  padding-left: 4rem;
+  bottom: 13rem;
+}
+
+.servicio-ayuda-explicacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #482983;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.servicio-ayuda-explicacion-texto-izquierda {
+  color: #ffffff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-left: 20rem;
+  margin-top: 8rem;
+}
+
+.servicio-ayuda-explicacion-texto-derecha {
+  background-color: #ffffff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: justify;
+  display: inline-block;
+  margin-right: 20rem;
+  padding-left: 10rem;
+  padding-bottom: 5rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+}
+
+/*Seccion servicio-acompañamiento*/
+.seccion-servicio-acompañamiento {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.servicio-acompañamiento-titulo {
+  padding-top: 13rem;
+  height: 100%;
+  width: auto;
+  background-image: url(../img/servicio-acompañamiento-alt.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+}
+
+.seccion-servicio-acompañamiento h2 {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 600;
+  padding-left: 4rem;
+  bottom: 13rem;
+}
+
+.servicio-acompañamiento-explicacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #482983;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.servicio-acompañamiento-explicacion-texto-izquierda {
+  color: #ffffff;
+  justify-content: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-left: 20rem;
+  margin-top: 8rem;
+}
+
+.servicio-acompañamiento-explicacion-texto-derecha {
+  background-color: #ffffff;
+  justify-content: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: justify;
+  display: inline-block;
+  margin-right: 20rem;
+  padding-left: 10rem;
+  padding-bottom: 5rem;
+  padding-right: 10rem;
+  padding-top: 5rem;
+}
+
+
+
+
+/*Footer*/
+.footer {
+  background-color: #482983;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-redes a {
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.footer-redes img {
+  width: 18px;
+  height: 18px;
+}
