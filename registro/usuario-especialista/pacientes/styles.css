@@ -1,0 +1,210 @@
+.topheader {
+  position: static;
+  background-color: #fcf8fc;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img {
+  height: 100px;
+  width: auto;
+  margin-right: -50px;
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+
+.logo h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  color: #482983;
+  margin: 0;
+  margin-left: -20px;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-horizontal li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+
+
+}
+
+
+.btn-cuenta {
+  background-color: #482983;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 50px;
+  white-space: nowrap;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+.btn-cuenta img{
+  width: 27px;
+  height: auto;
+  position: relative;
+  right: 6px;
+  top: 6px;
+}
+
+.menu-horizontal li a:hover {
+  color: white;
+  background-color: black;
+}
+
+
+
+/*PANTALLA PACIENTES*/
+.seccion-pac{
+  background-color: #482983;
+  display: flex;              
+  justify-content: center;
+  padding: 40px 60px;         
+  box-sizing: border-box;
+}
+
+.contenedor-pac{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 30px 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Título */
+.pacientes-header h2 {
+  color: #4b2a86;
+  font-size: 20px;
+  margin: 0;
+}
+
+.pacientes-header p {
+  color: #555;
+  margin: 4px 0 16px;
+}
+
+/* Tabla */
+.tabla-pacientes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-pacientes th,
+.tabla-pacientes td {
+  border: 1px solid #4b2a86;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabla-pacientes th {
+  background-color: #f7f1ff;
+  font-weight: 600;
+}
+
+.estado-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.estado-nuevo {
+  background-color: #fff6b3;
+  color: #4b2a86;
+}
+
+.estado-proceso {
+  background-color: #e6d9ff;
+  color: #4b2a86;
+}
+
+.estado-sos {
+  background-color: #f96c82;
+  color: white;
+}
+
+.btn-chat {
+  border: none;
+  background-color: #f0e6ff;
+  color: #4b2a86;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-chat:hover {
+  background-color: #e1d2ff;
+}
+
+
+/*Footer*/
+.footer {
+  background-color: #482983;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-redes a {
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.footer-redes img {
+  width: 18px;
+  height: 18px;
+}
+
