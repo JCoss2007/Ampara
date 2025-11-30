@@ -1,4 +1,7 @@
 # Ampara
+<<<<<<< HEAD
+Trabajo grupal de IHC sobre nuestro proyecto Ampara
+=======
 Created with Visual Studio Code
 Ampara es una plataforma digital enfocada en brindar apoyo emocional, orientación psicológica y herramientas de seguridad para mujeres que enfrentan situaciones de estrés, ansiedad o posibles episodios de violencia familiar.
 ## Miembros del equipo
@@ -27,3 +30,4 @@ Ampara es una plataforma digital enfocada en brindar apoyo emocional, orientaci�
 - GitHub para control de versiones y repositorio del proyecto
 - GitHub Pages para despliegue del prototipo web
 
+>>>>>>> origin/main

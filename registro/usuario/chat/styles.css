@@ -1,0 +1,370 @@
+.topheader {
+  position: static;
+  background-color: #fcf8fc;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo img {
+  height: 100px;
+  width: auto;
+  margin-right: -50px;
+  margin-bottom: -15px;
+  margin-top: -20px;
+}
+
+.logo h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  color: #482983;
+  margin: 0;
+  margin-left: -20px;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-horizontal li a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #000000;
+
+
+}
+
+.btn-sos {
+  background-color: #f0536b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 100px;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 50px;
+  white-space: nowrap;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.3rem;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+.btn-cuenta img{
+  width: 27px;
+  height: auto;
+  position: relative;
+  right: 6px;
+  top: 6px;
+}
+
+.menu-horizontal li a:hover {
+  color: white;
+  background-color: black;
+}
+
+/*PANTALLA CHAT AYUDA*/
+.chat-ayuda {
+  min-height: 100vh;
+  background-image: url("../img/fondo-hablar.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.div-chat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 120px;
+}
+
+
+/* LADO IZQUIERDO */
+
+.div-img {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Roboto',sans-serif;
+}
+
+.chat-title {
+  font-size: 42px;
+  margin: 0 0 20px;
+}
+
+.girl-img {
+  max-width: 260px;
+}
+
+/* TARJETA DE CHAT */
+
+.div-chatbox {
+  width: 420px;
+  height: 430px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+.div-psico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #b68ce7;
+}
+
+.chat-persona {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agent-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f0e5ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-avatar img {
+  width: 24px;
+  height: 24px;
+}
+
+.persona-info {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.nomb-per {
+  margin: 0;
+  font-weight: 600;
+}
+
+.nomb-estado {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* acciones header */
+
+.btn-chatbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-icono {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cerrar {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 6px 14px;
+}
+
+.cerrar p {
+  margin: 6px 0;
+}
+
+
+.div-mensajes {
+  flex: 1;
+  padding: 16px 18px;
+  background: #f7f3ff;
+  overflow-y: auto;
+}
+
+.mensaje {
+  max-width: 85%;
+  margin-bottom: 10px;
+}
+
+.mensaje p {
+  background: #8f67cf;
+  color: #ffffff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin: 0;
+}
+
+
+/* INPUT BAR */
+
+.chat-input-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border-top: 1px solid #ececec;
+}
+
+.chat-input-text input {
+  flex: 1;
+  border-radius: 20px;
+  border: 1px solid #dedede;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.chat-input-text input::placeholder {
+  color: #b7b7b7;
+}
+
+.chat-input-text input:focus {
+  outline: none;
+  border-color: #b68ce7;
+}
+
+.enviar {
+  border: none;
+  background: #b68ce7;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.div-politicas{
+  background-color: #9076BB;
+  color: white;
+  padding: 1px 15px;
+}
+
+.campo-req{
+  padding: 0px 10px;
+  font-size: 12px;
+  text-align: right;
+  margin: 0;
+}
+
+.campo-nombre{
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-nombre label{
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.campo-nombre input{
+  border-radius: 5px;
+  padding: 8px 8px;
+  border: 1px solid black;
+}
+
+.btn-chatear{
+  text-decoration: none;
+  background-color:#F0536B ;
+  justify-content: center;
+  display: block;
+  margin: 20px auto 0;
+  color: white;
+  text-align: center;
+  padding: 12px 0px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 400px;
+}
+
+/*Footer*/
+.footer {
+  background-color: #482983;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-redes a {
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.footer-redes img {
+  width: 18px;
+  height: 18px;
+}
+

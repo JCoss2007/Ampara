@@ -1,3 +1,190 @@
+<<<<<<< HEAD
+/*seccion motivacional*/
+
+.texto-motivacional-contenido {
+  background-image: url(img/fondo-hablar.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.logo-imagen img{
+  height: 4rem;
+  width: auto;
+}
+
+.logo-texto p{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+
+  color: #FFFFFF;
+
+  position: relative;
+  left: 1rem;
+  bottom: 2rem;
+}
+
+.mensaje p{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  padding-top: 8rem;
+
+}
+
+.nosotros-contenido {
+  background-color: #331f59;
+  padding-top: 1rem;
+}
+
+.nosotros-contenido h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  color: #FFFFFF;
+
+  text-align: center;
+}
+
+.nosotros-contenido p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.boton-plataforma{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.boton-plataforma a{
+  border-radius: 2rem;
+  color: white;
+  background-color: #F0536B;
+  text-decoration: none;
+
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+/*Servicios*/
+.servicios {
+  background-color: #F2EAF4;
+}
+
+.servicios-contenido h2{
+  color: #482983;
+  margin: 0;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 48px;
+
+
+}
+
+.servicios-brindados {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #331F59;
+
+}
+
+.servicio-apoyo img{
+  height: 9rem;
+}
+.servicio-apoyo p {
+  margin: 0;
+  text-align: center;
+}
+
+
+.servicio-foro img{
+  height: 9rem;
+}
+.servicio-foro p {
+  margin: 0;
+  text-align: center;
+}
+
+
+/*Testimonios*/
+.testimonios {
+  background-color: #F2EAF4;
+}
+
+.testimonios-contenido h2{
+  color: #482983;
+  margin: 0;
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 48px;
+}
+
+.testimonios-textos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30rem;
+}
+
+
+=======
 
 /*PANTALLA REGISTRO*/
 .registro {
@@ -129,6 +316,7 @@
   border-radius: 10px;
 }
 
+>>>>>>> origin/main
 /*FOOTER*/
 .footer {
   background-color: #482983;
