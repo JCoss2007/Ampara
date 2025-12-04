@@ -1,0 +1,199 @@
+.registro-header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2rem 0.8rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Flecha de regreso */
+.back-arrow {
+  position: absolute;
+  left: 2rem;
+  top: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(72, 41, 131, 0.55);
+  backdrop-filter: blur(3px);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.back-arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #482983;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ======================= */
+/*  NUEVA CONTRASEÑA AMPRA */
+/* ======================= */
+
+/* Reset básico (por si recuperar.css no lo trae) */
+* {
+  box-sizing: border-box;
+}
+
+/* Fondo lila y color de texto base */
+body {
+  background: #f7e9ff;
+  color: #482983;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal de la tarjeta */
+.login-container {
+  min-height: calc(100vh - 220px); /* deja espacio para el footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+/* Card blanca */
+.login-card {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Título y subtítulo de la pantalla */
+.login-title {
+  font-size: 2.1rem;
+  color: #482983;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #55526d;
+  text-align: center;
+  max-width: 430px;
+  margin: 0 auto 1.8rem auto;
+}
+
+/* Formulario interno */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+}
+
+/* Grupo de campo */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+/* Etiquetas de los campos */
+.input-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: #4c4370;
+}
+
+/* Campos de texto */
+.input-field {
+  width: 100%;
+  background: #ffffff;
+  color: #482983;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  outline: none;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-field::placeholder {
+  color: #9c8fa7;
+}
+
+.input-field:focus {
+  border: 1px solid #b05adf;
+  box-shadow: 0 0 8px rgba(176, 90, 223, 0.4);
+  background: #ffffff;
+}
+
+/* Texto de ayuda para contraseña */
+.password-hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #7b7398;
+}
+
+/* Mensaje de error (puedes usarlo con JS) */
+.password-error {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #e84565; /* rojito suave */
+  font-weight: 500;
+}
+
+/* Botón principal */
+.login-btn {
+  background: #482983;
+  color: white;
+  padding: 14px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.25s;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background: #2e165d;
+}
+
+/* Link para volver al login */
+.back-login-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e84565;
+  text-align: left;
+  text-decoration: none;
+}
+
+.back-login-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive pequeño */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 2rem 1.7rem;
+    border-radius: 1.2rem;
+  }
+
+  .login-title {
+    font-size: 1.7rem;
+  }
+}

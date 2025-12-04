@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPARA - Panel psicologo</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="psicologo.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="Pie.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <!-- IZQUIERDA: hamburguesa + logo -->
+      <div class="nav-left">
+        <!-- Botón hamburguesa (solo se ve en móvil) -->
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Logo clickeable que lleva al home del especialista -->
+        <a href="psicologo.html" class="nav-logo-link">
+          <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- CENTRO: links de navegación (solo desktop) -->
+      <nav class="nav-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA: Mi cuenta -->
+      <div class="nav-right">
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <span class="user-name">Fab Q</span>
+          <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" id="closeMenu">✕</button>
+      </div>
+
+      <nav class="mobile-menu-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+    </aside>
+
+    <!-- HERO FORO ANÓNIMO -->
+    <section class="foro-hero">
+      <div class="foro-hero-overlay"></div>
+
+      <div class="foro-hero-inner">
+        <!-- Columna izquierda: mensaje -->
+        <div class="foro-hero-text">
+          <h1>Brinda ayuda inmediata</h1>
+          <p>
+            Desde este espacio podrás responder dudas de mujeres que viven
+            situaciones de violencia doméstica, brindando orientación segura y
+            empática.
+          </p>
+        </div>
+
+        <!-- Columna derecha: card clickeable -->
+        <a href="foroanonimo2.html" class="foro-card-link">
+          <article class="foro-card">
+            <div class="foro-card-icon">
+              <img src="icons/charla (1).png" alt="Foro anónimo" />
+            </div>
+
+            <h2>Foro anónimo</h2>
+            <p>
+              Responde a mujeres con dudas respecto a la violencia doméstica
+              desde un espacio seguro y confidencial.
+            </p>
+          </article>
+        </a>
+      </div>
+    </section>
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

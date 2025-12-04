@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Articulo psicologo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales de tu proyecto -->
+    <link rel="stylesheet" href="psicologo.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+
+    <!-- Estilos propios de esta página -->
+    <link rel="stylesheet" href="articulo_psicologo.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <!-- IZQUIERDA: hamburguesa + logo -->
+      <div class="nav-left">
+        <!-- Botón hamburguesa (solo se ve en móvil) -->
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Logo clickeable que lleva al home del especialista -->
+        <a href="psicologo.html" class="nav-logo-link">
+          <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- CENTRO: links de navegación (solo desktop) -->
+      <nav class="nav-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA: Mi cuenta -->
+      <div class="nav-right">
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <span class="user-name">Fab Q</span>
+          <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" id="closeMenu">✕</button>
+      </div>
+
+      <nav class="mobile-menu-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+    </aside>
+
+    <!-- ===== CONTENIDO PRINCIPAL NOTICIAS ===== -->
+    <main class="noticias-container">
+      <div class="forum-header-top">
+        <!-- Botón de volver -->
+        <a href="psicologo.html" class="back-btn">
+          <img src="icons/atras.png" alt="Volver" />
+        </a>
+        <h1>Artículos</h1>
+      </div>
+
+      <p class="subtitulo">
+        Todas nuestros artículos y publicaciones en un solo lugar.
+      </p>
+
+      <!-- BUSCADOR (debajo del subtítulo) -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar por..." />
+        <button aria-label="Buscar">
+          <img src="icons/lupa.png" alt="" />
+        </button>
+      </div>
+
+      <!-- BLOQUE PARA PUBLICAR NOTICIA -->
+      <section class="post-creator">
+        <img src="image/anonimo1.png" alt="Avatar usuaria" class="avatar" />
+
+        <div class="post-fields">
+          <input
+            type="text"
+            placeholder="Escribe un título para tu artículo aquí"
+          />
+
+          <textarea
+            placeholder="Escribe aquí el contenido de tu articulo..."
+          ></textarea>
+
+          <button class="publicar">Publicar</button>
+        </div>
+      </section>
+
+      <!-- LISTADO DE NOTICIAS -->
+      <section class="lista-noticias">
+        <!-- Noticia 1 -->
+        <a href="noticia_detalle_1.html" class="noticia-link">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autor" class="avatar" />
+            <div>
+              <h3>Comienza tu recorrido hacia el autocuidado</h3>
+              <span class="meta">Alejandra • 28 marzo 2024</span>
+              <p>
+                Descubre herramientas y consejos prácticos para iniciar tu
+                camino hacia el autocuidado personal.
+              </p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Noticia 2 -->
+        <a href="noticia_detalle_2.html" class="noticia-link">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autora" class="avatar" />
+            <div>
+              <h3>Empatía y Apoya: Claves para fortalecer la comunidad</h3>
+              <span class="meta">Andrea • 01 marzo 2024</span>
+              <p>
+                Aprende cómo la empatía y el apoyo mutuo pueden ser
+                fundamentales para construir una comunidad más fuerte.
+              </p>
+            </div>
+          </article>
+        </a>
+      </section>
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

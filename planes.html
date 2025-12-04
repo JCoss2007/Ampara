@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Planes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales + mismos de mi_cuenta2 -->
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="eliminarCuenta.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="mi_cuenta2.css" />
+  </head>
+
+  <body>
+    <!-- HEADER (igual que en cuenta psicólogo / usuario pro) -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">P</div>
+
+          <div class="user-info">
+            <p class="user-name">Dra. Ana</p>
+            <a href="mi_cuenta2.html" class="user-link"
+              >Ver mi perfil</a
+            >
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <a href="pacientes.html">Pacientes</a>
+          <a href="articulo_psicologo.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PLANES -->
+
+    <div class="planes-wrapper">
+        <!-- Flecha afuera, sobre el fondo lila -->
+        <button
+          class="btn-back-planes"
+          onclick="window.location.href='psicologo.html'"
+          aria-label="Volver"
+        >
+          <img src="icons/atras.png" alt="Volver" />
+        </button>
+
+    <main class="account-page">
+      <section class="account-layout">
+        <!-- SIDEBAR -->
+        <aside class="account-sidebar">
+          <!-- Card Plan Premium que te trajo a esta pantalla -->
+          <button
+            type="button"
+            class="plan-card"
+            onclick="window.location.href='planes.html'"
+          >
+            <h2 class="plan-title">
+              PLAN<br />
+              PREMIUM<br />
+              AMPARA
+            </h2>
+            <p class="plan-text">
+              consulta los planes actuales y obten beneficios por cada uno
+            </p>
+          </button>
+
+          <!-- Puedes cambiar el saludo según el nombre del psicólogo -->
+            <div class="sidebar-hello">
+            <p class="hello-label">¡HOLA,</p>
+            <p class="hello-name">DRA. ANA!</p>
+          </div>
+
+          <!-- Opciones de cuenta para psicólogo -->
+          <nav class="account-menu">
+            <button class="account-menu-item is-active">
+              <span class="icon">👤</span>
+              <a href="mi_cuenta2.html">Perfil</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔔</span>
+              <a href="">Notificaciones</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🛠</span>
+              <a href="reportar2.html">Reportar un problema</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔄</span>
+              <a href="login.html">Cerrar sesión</a>
+            </button>
+
+            <button class="account-menu-item danger">
+              <span class="icon">✖</span>
+              <a href="eliminarCuenta2.html">Eliminar cuenta</a>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- LADO DERECHO: PLANES -->
+        <section class="account-main">
+          <h1 class="account-title">Planes AMPARA</h1>
+
+          <section class="plans-grid">
+            <!-- PLAN GRATUITO -->
+            <article class="plan-tier" data-plan="Plan Gratuito AMPARA">
+              <h2 class="plan-tier-title">PLAN<br />GRATUITO<br />AMPARA</h2>
+
+              <div class="plan-tier-body">
+                <p>
+                  Ideal para profesionales que recién se integran a la red
+                  AMPARA.
+                </p>
+                <ul>
+                  <li>Acceso básico al panel de casos asignados.</li>
+                  <li>Chat seguro con hasta 3 usuarias simultáneas.</li>
+                  <li>Registro limitado de notas y seguimiento.</li>
+                  <li>Estadísticas mensuales básicas de atención.</li>
+                </ul>
+                <p>
+                  Perfecto para empezar a brindar apoyo sin costo y conocer la
+                  plataforma.
+                </p>
+              </div>
+            </article>
+
+            <!-- PLAN PLUS -->
+            <article class="plan-tier" data-plan="Plan Plus AMPARA">
+              <h2 class="plan-tier-title">PLAN<br />PLUS<br />AMPARA</h2>
+
+              <div class="plan-tier-body">
+                <p>
+                  Pensado para psicólogos activos que gestionan varios casos.
+                </p>
+                <ul>
+                  <li>
+                    Acceso completo a historial de sesiones y reportes
+                    automáticos.
+                  </li>
+                  <li>Hasta 10 usuarias en seguimiento.</li>
+                  <li>Personalización del perfil profesional.</li>
+                  <li>Notificaciones y alertas de seguimiento emocional.</li>
+                </ul>
+                <p>
+                  Mejora tu gestión con herramientas de análisis y comunicación
+                  avanzada.
+                </p>
+              </div>
+            </article>
+
+            <!-- PLAN PRO -->
+            <article class="plan-tier" data-plan="Plan Pro AMPARA">
+              <h2 class="plan-tier-title">PLAN<br />PRO<br />AMPARA</h2>
+
+              <div class="plan-tier-body">
+                <p>
+                  Dirigido a profesionales con alto volumen de casos y enfoque
+                  clínico.
+                </p>
+                <ul>
+                  <li>Acceso ilimitado a usuarias y sesiones.</li>
+                  <li>
+                    Panel analítico con métricas de progreso emocional y alertas
+                    tempranas.
+                  </li>
+                  <li>Almacenamiento ampliado y cifrado reforzado.</li>
+                  <li>
+                    Prioridad en soporte técnico y actualizaciones exclusivas.
+                  </li>
+                </ul>
+                <p>
+                  Optimiza tu trabajo y ofrece un acompañamiento integral,
+                  seguro y personalizado.
+                </p>
+              </div>
+            </article>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo Ampara"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf">
+              Política de Privacidad
+            </a>
+            <a href="/Documentos/terminosycondiciones.pdf">
+              Términos y Condiciones
+            </a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">
+              Protección de Datos
+            </a>
+          </div>
+
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="YouTube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="menu_hamburguesa.js"></script>
+
+    <!-- JS para el popup de plan -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const planCards = document.querySelectorAll(".plan-tier");
+
+        planCards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const nombrePlan =
+              card.dataset.plan ||
+              card.querySelector(".plan-tier-title").textContent.trim();
+
+            alert("Estás en el " + nombrePlan);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

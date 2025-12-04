@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPARA - Instituciones Cercanas</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="Institucionescercanas.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <!-- CABECERA DEL MENÚ -->
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <!-- LINKS DEL MENÚ -->
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+    <main class="main-content-instituciones">
+      <div class="header-instituciones">
+        <div class="header-top">
+          <a href="ampara.html" class="btn-retroceso">
+            <img src="image/pista-anterior.png" alt="Volver" />
+          </a>
+          <h1>Instituciones cercanas</h1>
+        </div>
+
+        <p>Busca centros y organizaciones de apoyo cerca de ti.</p>
+      </div>
+      <div class="instituciones-layout-container">
+        <div class="results-area">
+          <div class="search-filter-bar">
+            <input
+              type="text"
+              placeholder="Busca en tu ciudad..."
+              class="search-input"
+            />
+            <button class="btn-search">Buscar</button>
+          </div>
+
+          <div class="filter-tabs">
+            <button class="tab active">Todos</button>
+            <button class="tab">Apoyo Psicológico</button>
+            <button class="tab">Asesoría Legal</button>
+            <button class="tab">Refugios</button>
+          </div>
+
+          <div class="instituciones-list" id="institucionesList"></div>
+          <button id="cargarMas" class="btn-load-more">Cargar más</button>
+
+          <div id="scroll-sentinel"></div>
+        </div>
+
+        <!-- MAPA + NOTA IMPORTANTE -->
+        <div class="info-area">
+          <div class="map-container">
+            <h3>Ubicación en el Mapa</h3>
+            <div id="map-placeholder">
+              <img
+                src="image/MapaInstitucionesCercanas.png"
+                alt="Mapa"
+                class="mapa-img-estatica"
+              />
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h4>💡 Nota Importante</h4>
+            <p>
+              La ubicación exacta de algunos refugios puede ser oculta por
+              seguridad.
+            </p>
+            <p>
+              Si estás en peligro inmediato, usa el botón SOS o llama a
+              emergencias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <section id="footer">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-brand">
+              <img src="icons/logo_ampara_footer.png" class="footer-logo" />
+              <small>© 2025 Todos los derechos reservados</small>
+            </div>
+  
+            <div class="footer-links">
+              <h4>Legal</h4>
+              <a href="Documentos/Política de Privacidad.pdf"
+                >Política de Privacidad</a
+              >
+              <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+                >Términos y Condiciones</a
+              >
+              <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+            </div>
+  
+            <div class="footer-social">
+              <h4>Síguenos</h4>
+              <a href="#"><img src="icons/facebook.png" class="social-icon" /></a>
+              <a href="#"
+                ><img src="icons/instagram.png" class="social-icon"
+              /></a>
+              <a href="#"><img src="icons/youtube.png" class="social-icon" /></a>
+              <a href="#"><img src="icons/twitter.png" class="social-icon" /></a>
+            </div>
+          </div>
+        </footer>
+    <script src="Institucionescercanas.js"></script>
+    <script src="menu_hamburguesa.js".js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMPARA - Directorio</title>
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" /> 
+    <link rel="stylesheet" href="directorio.css" /> 
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="btn-burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+    </div>
+  
+    <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+      <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+    </a>
+  
+    <nav class="nav-links">
+      <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="articulo_usuario.html">Artículos</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+  
+    <div class="nav-right">
+      <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+      <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <p class="user-name">Fab Q</p>
+          <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+        </div>
+        <button class="btn-close" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+    </div>
+  </aside>
+
+    <section class="directory-page-container">
+        <div class="directory-header">
+            <div class="header-top">
+                    <div class="titulo-fila">
+                        <a href="ampara.html" class="btn-retroceso">
+                            <img src="icons/atras.png" alt="Volver" />
+                        </a>
+                        <h1>Directorio</h1>
+                    </div>
+            </div>
+            <p>Busca líneas seguras que estén disponibles para brindarte apoyo</p>
+
+            <div class="main-search-bar">
+                <input type="text" id="main-search-input" placeholder="Buscar por nombre, descripción o número de contacto...">
+                <button type="button" class="search-button">
+                    <img src="icons/lupa.png" alt="Buscar"> 
+                </button>
+            </div>
+            
+            <div class="filter-controls-standalone">
+                <label>
+                    <input type="checkbox" id="show-favorites">
+                    Mostrar solo Favoritos
+                </label>
+            </div>
+        </div>
+
+        <div class="directory-main-content">
+            <div class="directory-list" id="directory-list"></div>
+
+            <div class="directory-sidebar">
+                <img src="icons/llamada.png" alt="Decoración">
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="icons/logo_ampara_footer.png" alt="Logo" class="footer-logo" />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf">Política de Privacidad</a>
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf">Términos y Condiciones</a>
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"><img src="icons/facebook.png" alt="Facebook" class="social-icon" /></a>
+            <a href="#"><img src="icons/instagram.png" alt="Instagram" class="social-icon" /></a>
+            <a href="#"><img src="icons/youtube.png" alt="Youtube" class="social-icon" /></a>
+            <a href="#"><img src="icons/twitter.png" alt="Twitter" class="social-icon" /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="directorio.js"></script> 
+    <script src="menu_hamburguesa.js"></script> 
+</body>
+</html>

@@ -1,0 +1,365 @@
+/* --- AGREGA ESTO AL PRINCIPIO PARA FIJAR EL HEADER --- */
+.navbar {
+  background-color: white; /* Fondo blanco original */
+  position: fixed; /* Se queda pegado arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Definimos una altura fija para calcular el espacio */
+  z-index: 1000; /* Siempre encima de todo */
+
+  /* Opcional: una sombra suave para separarlo del fondo morado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /* Alineación interna (para que el logo y botones se centren) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Un poco de margen a los lados */
+  box-sizing: border-box; /* Para que el padding no aumente el ancho */
+}
+
+/* --- CÓDIGO CORREGIDO DEL CONTENIDO --- */
+.main-content-instituciones {
+  background-color: var(--color-primary-dark, #4a148c);
+
+  /* CAMBIO AQUI: Reducido de 140px a 100px para subir el título */
+  padding-top: 100px;
+
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.btn-retroceso {
+  display: flex;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-retroceso:hover {
+  transform: translateX(-4px);
+}
+
+.btn-retroceso img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.header-instituciones {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.header-instituciones h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.header-instituciones p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.instituciones-layout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
+  align-items: start;
+}
+
+.results-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-filter-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-search {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #c2185b;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 8px 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.tab.active {
+  background-color: white;
+  color: #4a148c;
+  border-color: white;
+  font-weight: 600;
+}
+
+.instituciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.institucion-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.card-content h3 {
+  color: #4a148c;
+  margin: 10px 0 5px 0;
+  font-size: 1.3rem;
+}
+
+.card-content p {
+  font-size: 0.95em;
+  color: #333;
+  margin: 4px 0;
+}
+
+.card-content .description {
+  font-style: italic;
+  color: #666;
+  margin-top: 12px;
+  font-size: 0.9em;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.tag-psicologico {
+  background-color: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.tag-refugio {
+  background-color: #fee2e2;
+  color: #be123c;
+  border: 1px solid #fecaca;
+}
+
+.tag-legal {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 140px;
+  text-align: center;
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+}
+
+.action-link {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.action-link:first-child {
+  color: #6a5acd;
+  border: 1px solid #6a5acd;
+  background-color: transparent;
+}
+.action-link:first-child:hover {
+  background-color: #6a5acd;
+  color: white;
+}
+
+.action-link:last-child {
+  background-color: #ff5b7f;
+  color: white;
+  border: 1px solid #ff5b7f;
+  box-shadow: 0 4px 10px rgba(255, 91, 127, 0.2);
+}
+.action-link:last-child:hover {
+  background-color: #e64a6b;
+  transform: translateY(-2px);
+}
+
+.btn-load-more {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 12px 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: white;
+  color: #4a148c;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px; /* Ajustado para que el mapa baje acorde al header fijo */
+}
+
+.map-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.map-container h3 {
+  color: #4a148c;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.mapa-img-estatica {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.info-box {
+  background-color: #fce4ec;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #e91e63;
+}
+
+.info-box h4 {
+  color: #e91e63;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-box p {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .instituciones-layout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-area {
+    position: static;
+    order: -1;
+  }
+
+  .institucion-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-actions {
+    width: 100%;
+    flex-direction: row;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    justify-content: space-between;
+  }
+
+  .action-link {
+    width: 48%;
+  }
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Foro anónimo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="psicologo.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="foroanonimo.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <!-- IZQUIERDA: hamburguesa + logo -->
+      <div class="nav-left">
+        <!-- Botón hamburguesa (solo se ve en móvil) -->
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Logo clickeable que lleva al home del especialista -->
+        <a href="psicologo.html" class="nav-logo-link">
+          <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- CENTRO: links de navegación (solo desktop) -->
+      <nav class="nav-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA: Mi cuenta -->
+      <div class="nav-right">
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <span class="user-name">Fab Q</span>
+          <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" id="closeMenu">✕</button>
+      </div>
+
+      <nav class="mobile-menu-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <section class="forum-hero">
+        <div class="forum-inner">
+          <!-- Título y descripción -->
+          <header class="forum-header">
+            <div class="forum-header-top">
+              <!-- Botón de volver -->
+              <a href="psicologo.html" class="back-btn">
+                <img src="icons/atras.png" alt="Volver" />
+              </a>
+
+              <h1>Foro anónimo</h1>
+            </div>
+            <p>
+              Comparte experiencias y recibe apoyo sin revelar tu identidad.
+            </p>
+          </header>
+
+          <!-- Categorías y buscador -->
+          <div class="forum-top-row">
+            <div class="forum-categories">
+              <button class="pill">Apoyo emocional</button>
+              <button class="pill">Asesoría legal</button>
+
+              <button class="pill">Preguntas</button>
+            </div>
+
+            <div class="forum-search">
+              <input
+                type="text"
+                placeholder="Buscar por..."
+                aria-label="Buscar en el foro"
+              />
+              <button class="btn-search">🔍</button>
+            </div>
+          </div>
+
+          <!-- Caja de nuevo mensaje + normas -->
+          <div class="forum-main">
+            <div class="forum-left">
+              <!-- Nueva publicación -->
+              <div class="forum-new-post">
+                <input
+                  type="text"
+                  placeholder="Escribe tu mensaje (no compartas datos personales)"
+                />
+                <button class="btn-publish">Publicar</button>
+              </div>
+
+              <!-- Filtros de pestañas -->
+              <div class="forum-tabs">
+                <button class="tab">Recientes</button>
+                <button class="tab">Populares</button>
+                <button class="tab">Sin responder</button>
+              </div>
+
+              <!-- Post 1 -->
+              <article class="post-card">
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo1" />
+                </div>
+
+                <div class="post-body">
+                  <h3 class="post-author">anónimo #45</h3>
+                  <p class="post-text">
+                    Mis días eran grises.. A veces me ocupaba tanto en los
+                    deberes que me olvidaba de mí misma, si alguna tiene una
+                    experiencia similar, puede compartir cómo lo superó.
+                  </p>
+                </div>
+
+                <div class="post-actions">
+                  <button type="button" class="btn-responder">Responder</button>
+                  <button type="button">Reacción ♡</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
+                </div>
+              </article>
+
+              <!-- Post 2 -->
+              <article class="post-card">
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo2" />
+                </div>
+
+                <div class="post-body">
+                  <h3 class="post-author">anónimo #41</h3>
+                  <p class="post-text">
+                    Mis días eran grises.. A veces me ocupaba tanto en los
+                    deberes que me olvidaba de mí misma, si alguna tiene una
+                    experiencia similar, puede compartir cómo lo superó.
+                  </p>
+                </div>
+
+                <div class="post-actions">
+                  <button type="button" class="btn-responder">Responder</button>
+                  <button type="button">Reacción ♡</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article class="post-card">
+                <div class="post-avatar">
+                  <img src="image/anonimo1.png" alt="anonimo3" />
+                </div>
+
+                <div class="post-body">
+                  <h3 class="post-author">anónimo #40</h3>
+                  <p class="post-text">
+                    Alguna que me pueda brindar ayuda de asesoría legal por
+                    favor.
+                  </p>
+                </div>
+
+                <div class="post-actions">
+                  <button type="button" class="btn-responder">Responder</button>
+                  <button type="button">Reacción ♡</button>
+                  <button type="button" class="btn-reportar">Reportar</button>
+                </div>
+              </article>
+            </div>
+
+            <!-- COLUMNA DERECHA: NORMAS -->
+            <aside class="forum-right">
+              <div class="rules-card">
+                <h2>Normas del foro</h2>
+                <ul>
+                  <li>
+                    No compartas nombres, direcciones ni datos personales.
+                  </li>
+                  <li>Respeta las experiencias de otras personas.</li>
+                  <li>
+                    Evita lenguaje agresivo, discriminatorio o que incite a la
+                    violencia.
+                  </li>
+                  <li>
+                    Si estás en peligro inmediato, usa el botón SOS o llama a
+                    las líneas de ayuda de tu país.
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL RESPUESTA ANÓNIMA -->
+    <div class="reply-overlay" id="replyOverlay">
+      <div class="reply-card">
+        <h2>Tu respuesta será publicada de forma anónima</h2>
+
+        <div class="reply-input-wrapper">
+          <textarea
+            id="replyTextarea"
+            maxlength="200"
+            placeholder="Escribe tu respuesta aquí..."
+          ></textarea>
+          <span class="reply-char-count" id="replyCharCount">0/200</span>
+        </div>
+
+        <div class="reply-actions">
+          <button type="button" class="btn-reply-cancel" id="replyCancel">
+            Cancelar
+          </button>
+
+          <button type="button" class="btn-reply-send" id="replySend">
+            Publicar de forma anónima
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL: REPORTAR MENSAJE -->
+
+    <div class="report-overlay" id="reportOverlay">
+      <div class="report-card">
+        <h2>Motivo de reporte de mensaje</h2>
+
+        <div class="report-input-wrapper">
+          <textarea
+            id="reportTextarea"
+            maxlength="200"
+            placeholder="Describe brevemente el motivo del reporte..."
+          ></textarea>
+          <span class="report-char-count" id="reportCharCount">0/200</span>
+        </div>
+
+        <div class="report-actions">
+          <button type="button" class="btn-report-cancel" id="reportCancel">
+            Cancelar
+          </button>
+
+          <button type="button" class="btn-report-send" id="reportSend">
+            Reportar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="foroanonimo.js"></script>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

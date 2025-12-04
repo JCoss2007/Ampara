@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Autoevaluación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="autoevaluacion.css" />
+  </head>
+
+  <header class="navbar">
+    <!-- IZQUIERDA: solo burger -->
+    <div class="nav-left">
+      <button
+        class="btn-burger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- LOGO SOLO PARA DESKTOP -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+    </div>
+
+    <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+    <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+      <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+    </a>
+
+    <!-- CENTRO (solo desktop) -->
+    <nav class="nav-links">
+      <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="articulo_usuario.html">Artículos</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <!-- DERECHA -->
+    <div class="nav-right">
+      <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+      <a href="login.html" class="btn-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL -->
+  <aside class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <!-- CABECERA DEL MENÚ -->
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+
+        <div class="user-info">
+          <p class="user-name">Fab Q</p>
+          <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <!-- LINKS DEL MENÚ -->
+      <nav class="mobile-menu-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+    </div>
+  </aside>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <section class="selftest-hero">
+        <div class="selftest-inner">
+          <header class="selftest-header">
+            <div class="selftest-header-top">
+              <!-- Botón volver (opcional, cambia href a donde quieras) -->
+              <a href="ampara.html" class="back-btn">
+                <img src="icons/atras.png" alt="Volver" />
+              </a>
+
+              <h1>Autoevaluación</h1>
+            </div>
+
+            <p>
+              Este test es solo orientativo y no reemplaza la ayuda de un
+              profesional. Responde con honestidad sobre cómo te has sentido
+              últimamente.
+            </p>
+          </header>
+
+          <section class="selftest-layout">
+            <!-- Tarjeta principal del test -->
+            <article class="selftest-card">
+              <h2>Test de autoevaluación para víctimas</h2>
+              <p class="selftest-intro">
+                Marca la opción que mejor describa tu situación en las últimas
+                semanas.
+              </p>
+
+              <form class="selftest-form">
+                <!-- Pregunta 1 -->
+                <div class="question-group">
+                  <p class="question-text">
+                    1. ¿Te sientes en peligro o con miedo en tu hogar o entorno
+                    cercano?
+                  </p>
+                  <div class="scale-options">
+                    <label>
+                      <input type="radio" name="q1" value="nunca" />
+                      Nunca
+                    </label>
+                    <label>
+                      <input type="radio" name="q1" value="a-veces" />
+                      A veces
+                    </label>
+                    <label>
+                      <input type="radio" name="q1" value="a-menudo" />
+                      A menudo
+                    </label>
+                    <label>
+                      <input type="radio" name="q1" value="siempre" />
+                      Siempre
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="question-group">
+                  <p class="question-text">
+                    2. ¿Has recibido insultos, humillaciones o amenazas de forma
+                    constante por parte de alguien cercano?
+                  </p>
+                  <div class="scale-options">
+                    <label>
+                      <input type="radio" name="q2" value="nunca" />
+                      Nunca
+                    </label>
+                    <label>
+                      <input type="radio" name="q2" value="a-veces" />
+                      A veces
+                    </label>
+                    <label>
+                      <input type="radio" name="q2" value="a-menudo" />
+                      A menudo
+                    </label>
+                    <label>
+                      <input type="radio" name="q2" value="siempre" />
+                      Siempre
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="question-group">
+                  <p class="question-text">
+                    3. ¿Sientes que alguien controla tus decisiones, tu dinero,
+                    tus amistades o la forma en la que te vistes?
+                  </p>
+                  <div class="scale-options">
+                    <label>
+                      <input type="radio" name="q3" value="nunca" />
+                      Nunca
+                    </label>
+                    <label>
+                      <input type="radio" name="q3" value="a-veces" />
+                      A veces
+                    </label>
+                    <label>
+                      <input type="radio" name="q3" value="a-menudo" />
+                      A menudo
+                    </label>
+                    <label>
+                      <input type="radio" name="q3" value="siempre" />
+                      Siempre
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="question-group">
+                  <p class="question-text">
+                    4. ¿Has sufrido empujones, golpes u otro tipo de agresión
+                    física?
+                  </p>
+                  <div class="scale-options">
+                    <label>
+                      <input type="radio" name="q4" value="nunca" />
+                      Nunca
+                    </label>
+                    <label>
+                      <input type="radio" name="q4" value="a-veces" />
+                      A veces
+                    </label>
+                    <label>
+                      <input type="radio" name="q4" value="a-menudo" />
+                      A menudo
+                    </label>
+                    <label>
+                      <input type="radio" name="q4" value="siempre" />
+                      Siempre
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="question-group">
+                  <p class="question-text">
+                    5. ¿Has pensado en pedir ayuda pero te da miedo o vergüenza
+                    hacerlo?
+                  </p>
+                  <div class="scale-options">
+                    <label>
+                      <input type="radio" name="q5" value="nunca" />
+                      Nunca
+                    </label>
+                    <label>
+                      <input type="radio" name="q5" value="a-veces" />
+                      A veces
+                    </label>
+                    <label>
+                      <input type="radio" name="q5" value="a-menudo" />
+                      A menudo
+                    </label>
+                    <label>
+                      <input type="radio" name="q5" value="siempre" />
+                      Siempre
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Botón final (sin lógica JS, solo diseño) -->
+                <div class="selftest-actions">
+                  <button type="button" class="btn-secondary">
+                    Limpiar respuestas
+                  </button>
+                  <button type="submit" class="btn-primary">
+                    Finalizar autoevaluación
+                  </button>
+                </div>
+
+                <p class="selftest-note">
+                  Si alguna de tus respuestas te genera preocupación, puedes
+                  usar el botón <strong>SOS</strong> o ir a la sección
+                  <strong>Hablar con especialista</strong> para recibir apoyo.
+                </p>
+              </form>
+            </article>
+
+            <!-- Tarjeta lateral con info -->
+            <aside class="selftest-sidecard">
+              <h3>¿Cómo usar este test?</h3>
+              <ul>
+                <li>No es un diagnóstico, solo una guía para reflexionar.</li>
+                <li>
+                  Puedes repetirlo cuando quieras para ver cómo te sientes con
+                  el tiempo.
+                </li>
+                <li>
+                  Si tus respuestas indican riesgo, es importante que busques
+                  ayuda segura.
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </div>
+      </section>
+    </main>
+
+     <!-- PIE DE PÁGINA -->
+     <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

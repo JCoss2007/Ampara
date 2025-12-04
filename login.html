@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampara - Ingreso Seguro</title>
+
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="Pie.css" />
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header con imagen decorativa -->
+    <header class="header-banner" aria-label="Header Ampara">
+      <a
+        href="index.html"
+        class="back-btn"
+        aria-label="Volver a la página principal"
+      >
+        ← Volver al inicio
+      </a>
+    </header>
+
+    <!-- Contenedor general del login -->
+    <main class="login-container">
+      <!-- Card del login -->
+      <div class="login-card">
+        <!-- Logo circular -->
+        <div class="logo-circle">
+          <img src="icons/logo_circular.png" alt="Logo Ampara" />
+          <!-- Si no tienes logo activo:
+          <h2>Ampara</h2>
+          -->
+        </div>
+
+        <h1 class="login-title">Bienvenida de vuelta</h1>
+
+        <form onsubmit="return validarLogin(event);" class="login-form">
+          <input
+            type="text"
+            id="email"
+            placeholder="Alias o correo"
+            class="input-field"
+            required
+          />
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Contraseña"
+            class="input-field"
+            required
+          />
+
+          <a href="recuperar.html" class="forgot-password">
+            ¿Olvidaste tu contraseña?
+          </a>
+
+          <button type="submit" class="login-btn">Ingresar</button>
+
+          <div class="social-login">
+            <button type="button" class="social-btn">
+              <img
+                src="icons/google-circle.png"
+                alt="Iniciar sesión con Google"
+              />
+            </button>
+            <button type="button" class="social-btn">
+              <img
+                src="icons/facebook_logo.png"
+                alt="Iniciar sesión con Facebook"
+              />
+            </button>
+            <button type="button" class="social-btn">
+              <img src="icons/apple.png" alt="Iniciar sesión con Apple" />
+            </button>
+          </div>
+
+          <p class="create-account">
+            ¿No tienes una cuenta? <a href="registro.html">Crear una cuenta</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="https://www.facebook.com/"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="https://www.youtube.com/"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="https://x.com/"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="login.js"></script>
+  </body>
+</html>

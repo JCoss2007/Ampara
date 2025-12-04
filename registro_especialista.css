@@ -1,0 +1,375 @@
+/* ============================= */
+/*   FONDO COMPLETO DE LA PÁGINA */
+/* ============================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo global con imagen + overlay morado */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+      rgba(72, 41, 131, 0.55),
+      rgba(72, 41, 131, 0.55)
+    ),
+    url("image/grupo-mujeres.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*          HEADER / TÍTULO      */
+/* ============================= */
+
+.registro-header {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2rem 0.6rem;
+  text-align: center;
+  position: relative;
+}
+
+.registro-header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.registro-header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Flecha de regreso */
+.back-arrow {
+  position: absolute;
+  left: 2rem;
+  top: 1.3rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(72, 41, 131, 0.55);
+  backdrop-filter: blur(3px);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.back-arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #482983;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/*      BARRA DE PROGRESO        */
+/* ============================= */
+
+.progress-steps {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #f3e9ff;
+  opacity: 0.6;
+}
+
+.progress-step .step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 2px solid #f3e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.progress-step .step-label {
+  max-width: 110px;
+}
+
+/* Paso activo */
+.progress-step.active {
+  opacity: 1;
+}
+
+.progress-step.active .step-circle {
+  background: #ffffff;
+  color: #482983;
+  border-color: #ffffff;
+}
+
+/* ============================= */
+/*     SECCIÓN REGISTRO          */
+/* ============================= */
+
+.registro {
+  min-height: calc(100vh - 220px); /* deja espacio para el footer */
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.registro-inner {
+  width: 100%;
+  max-width: 860px; /* para que el bloque se centre mejor */
+  margin-top: -4px;
+}
+
+/* Contenedor formulario + ilustración */
+
+.registro-content {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/*          FORMULARIO           */
+/* ============================= */
+
+.registro-form {
+  flex: 0 0 auto;
+  max-width: 450px; /* formulario más compacto */
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(4px);
+  border-radius: 1.2rem;
+  padding: 1.5rem 1.7rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3e3559;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input {
+  border-radius: 999px;
+  border: 1px solid #ddd7f3;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #fdfbff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #8e5cff;
+  box-shadow: 0 0 0 2px rgba(142, 92, 255, 0.25);
+}
+
+/* Términos */
+
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #463c63;
+  margin-bottom: 1rem;
+}
+
+.form-check input {
+  margin-top: 0.15rem;
+}
+
+.form-check a {
+  color: #8e5cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-check a:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+
+.btn-primary {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #482983;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3c226d;
+  box-shadow: 0 8px 20px rgba(33, 9, 64, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Link a login */
+
+.login-link {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0.7rem;
+  color: #4a4458;
+}
+
+.login-link a {
+  color: #8e5cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/*         ILUSTRACIÓN           */
+/* ============================= */
+
+.registro-illustration {
+  flex: 0 0 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registro-illustration img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+/* ================================= */
+/*   RESPONSIVE TABLET Y CELULARES   */
+/* ================================= */
+
+/* Tablet / pantallas medianas */
+@media (max-width: 900px) {
+  .registro-header {
+    height: 190px;
+    padding: 1rem 1.2rem 0.4rem;
+  }
+
+  .registro-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .progress-steps {
+    gap: 1.6rem;
+  }
+
+  .registro-inner {
+    max-width: 600px;
+  }
+
+  .registro-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .registro-form {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .registro-illustration {
+    flex: 0 0 auto;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 520px) {
+  .back-arrow {
+    left: 0.9rem;
+    top: 0.9rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .registro-header {
+    height: 165px;
+    padding: 0.8rem 1rem 0.5rem;
+  }
+
+  .registro-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .progress-steps {
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    row-gap: 0.3rem;
+  }
+
+  .progress-step .step-circle {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+  }
+
+  .progress-step .step-label {
+    font-size: 0.75rem;
+    max-width: 90px;
+  }
+
+  .registro-inner {
+    margin-top: 0.5rem;
+  }
+
+  .registro-form {
+    padding: 1.3rem 1.1rem;
+    border-radius: 1.1rem;
+  }
+}

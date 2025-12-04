@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hablar ahora</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="sos.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <!-- CABECERA DEL MENÚ -->
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <!-- LINKS DEL MENÚ -->
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <section class="sos-hero">
+      <div class="sos-inner">
+        <h2>SOS activado</h2>
+        <div class="sos-txt">
+          <p>Enviaremos una alerta en 05 seg</p>
+        </div>
+        <div class="sos-btns">
+          <a href="#" id="cancelarSOS" class="sos-btn1">Cancelar ahora</a>
+
+          <a href="#" class="sos-btn2">Enviar alerta</a>
+        </div>
+        <div class="sos-txt">
+          <p>Tu actividad se oculta del historial</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (EL MISMO DE ANTES) -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo y nombre de sitio -->
+        <div class="footer-brand">
+          <img
+            src="icons/logo_ampara_footer.png"
+            alt="Logo"
+            class="footer-logo"
+          />
+          <small>© 2025 Todos los derechos reservados</small>
+        </div>
+
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/Documentos/politicaprivacidad.pdf"
+            >Política de Privacidad</a
+          >
+          <a href="/Documentos/terminosycondiciones.pdf"
+            >Términos y Condiciones</a
+          >
+          <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#"
+            ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/instagram.png" alt="Instagram" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/youtube.png" alt="YouTube" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="menu_hamburguesa.js"></script>
+    <script>
+  document.getElementById("cancelarSOS").addEventListener("click", () => {
+    const origen = sessionStorage.getItem("origenSOS");
+
+    if (origen) {
+      window.location.href = origen; // Regresa al origen real
+    } else {
+      window.location.href = "ampara.html"; // Si no existe, fallback
+    }
+  });
+</script>
+  </body>
+</html>

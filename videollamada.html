@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Videollamada segura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuente -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+
+    <!-- Estilos específicos -->
+    <link rel="stylesheet" href="videollamada.css" />
+  </head>
+
+  <body>
+     <!-- HEADER (igual que en cuenta psicólogo / usuario pro) -->
+      <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="#">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="secure-video-page">
+      <section class="secure-video-layout">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="secure-video-info">
+  <div class="secure-video-title-row">
+    <a href="hablarahora.html" class="back-video" aria-label="Volver">
+      <img src="icons/atras.png" alt="Volver" />
+    </a>
+
+    <h1 class="secure-video-title">Videollamada segura</h1>
+  </div>
+
+  <p class="secure-video-subtitle">
+    Conéctate cara a cara con una psicóloga en un entorno confidencial.
+    Tu videollamada está protegida y asociada a tu cuenta.
+  </p>
+</div>
+
+        <!-- COLUMNA DERECHA: TARJETA DE VIDEOLLAMADA -->
+        <div class="secure-video-panel">
+          <div class="video-card">
+            <!-- HEADER -->
+            <header class="video-card-header">
+              <div class="video-card-user">
+                <div class="video-avatar"></div>
+                <div class="video-user-info">
+                  <span class="video-user-name">Lic. María (Psicóloga)</span>
+                  <span class="video-user-status">En línea</span>
+                </div>
+              </div>
+
+              <div class="video-card-actions">
+  <button
+    type="button"
+    class="video-header-btn"
+    aria-label="Más opciones"
+  >
+    •••
+  </button>
+
+  <a
+    href="hablarahora.html"
+    class="video-header-btn video-header-close"
+    aria-label="Cerrar videollamada"
+  >
+    ✕
+  </a>
+</div>
+            </header>
+
+            <!-- CUERPO: VIDEO PRINCIPAL + MINIATURA -->
+            <div class="video-card-body">
+              <div class="video-main">
+                <!-- Aquí iría el <video> real, por ahora es maqueta -->
+                <!-- <video autoplay muted></video> -->
+                <span class="video-main-placeholder">
+                  Videollamada conectando...
+                </span>
+              </div>
+
+              <div class="video-self">
+                <!-- Igual acá podrías usar otro <video> -->
+                <span class="video-self-placeholder">Tú</span>
+              </div>
+            </div>
+
+            <!-- ESTADO Y TIEMPO -->
+            <div class="video-status-bar">
+              <span class="video-status-text"
+                >Conectando con la psicóloga...</span
+              >
+              <span class="video-timer">00:00</span>
+            </div>
+
+            <!-- CONTROLES -->
+            <footer class="video-card-footer">
+              <button
+                type="button"
+                class="video-control-btn"
+                aria-label="Apagar cámara"
+              >
+                🎥
+              </button>
+              <button
+                type="button"
+                class="video-control-btn"
+                aria-label="Activar/desactivar altavoz"
+              >
+                🔊
+              </button>
+              <button
+                type="button"
+                class="video-control-btn video-control-end"
+                aria-label="Finalizar videollamada"
+              >
+                ☎
+              </button>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+    <!-- PIE DE PAGINA -->
+
+    <!-- FOOTER -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="icons/logo_ampara_footer.png" class="footer-logo" />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"><img src="icons/facebook.png" class="social-icon" /></a>
+            <a href="#"
+              ><img src="icons/instagram.png" class="social-icon"
+            /></a>
+            <a href="#"><img src="icons/youtube.png" class="social-icon" /></a>
+            <a href="#"><img src="icons/twitter.png" class="social-icon" /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+      <script src="menu_hamburguesa.js"></script>
+    </body>
+ </html>
+
+  </body>
+</html>

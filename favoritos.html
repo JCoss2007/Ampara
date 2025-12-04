@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Mi cuenta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reutilizamos estilos del header + estilos propios -->
+
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="favoritos.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO MI CUENTA -->
+    <main class="account-page">
+      <section class="account-layout">
+        <!-- Lado izquierdo -->
+        <aside class="account-sidebar">
+          <div class="sidebar-hello">
+            <p class="hello-label">¡HOLA,</p>
+            <p class="hello-name">FAB!</p>
+          </div>
+
+          <nav class="account-menu">
+            <button class="account-menu-item">
+              <span class="icon">👤</span>
+              <a href="mi_cuenta.html">Perfil</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">📜</span>
+              <a href="historial.html">Historial</a>
+            </button>
+
+            <button class="account-menu-item is-active">
+              <span class="icon">💜</span>
+              <a href="favoritos.html">Favoritos</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔔</span>
+              <a href="">Notificaciones</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🛠</span>
+              <a href="reportar.html">Reportar un problema</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔄</span>
+              <a href="login.html">Cerrar sesión</a>
+            </button>
+
+            <button class="account-menu-item danger">
+              <span class="icon">✖</span>
+              <a href="index.html">Eliminar cuenta</a>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Lado derecho -->
+        <section class="account-main">
+          <h1 class="account-title">Favoritos</h1>
+
+          <!-- Bloque Noticias -->
+          <article class="account-card">
+            <header class="account-card-header">
+              <h2>Noticias</h2>
+            </header>
+
+            <div class="account-card-body">
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Noticia #1</p>
+                  <img src="image/noticia1.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Con motivo del Día Internacional de la Eliminación de la Violencia contra la Mujer, el Instituto Nacional de Estadística e Informática (INEI) reveló que, de acuerdo con la Encuesta Demográfica y de Salud Familiar (Endes 2022), el 35.6% de las mujeres de entre 15 y 49 años fueron víctimas de violencia familiar en los últimos 12 meses anteriores a la encuesta. El 34.8% indicó que en los últimos 12 meses había sido víctima de agresión psicológica y/o verbal; el 8.1%, de violencia física; y el 2.2%, de violencia sexual.</p>
+                </div>
+              </div>
+              <div class="new">
+                <div class="field-group">
+                  <p class="field-label">Noticia #2</p>
+                  <img src="image/noticia2.png" alt="noticia">
+                </div>
+
+                <div class="field-group">
+                  <p class="field-label">Descripcion</p>
+                  <p class="field-value">Lima, 25 nov (EFE).- Los centros médicos del Ministerio de Salud de Perú atendieron 176.925 casos de violencia contra la mujer, de enero a octubre de este año, donde la mayoría fueron adultas, de 30 a 59 años de edad, con 60.604 casos, y adolescentes con 44.662 incidencias, según informó este martes esa cartera. En el Día Internacional de la Eliminación de la Violencia contra la Mujer, el ministerio peruano subrayó que este tipo de violencia no solo deja huellas físicas; sino también genera efectos profundos en la salud mental, el bienestar social y el desarrollo de niñas, niños, adolescentes, mujeres adultas y comunidades. La directora ejecutiva de la Dirección de Salud Mental del ministerio, July Caballero, declaró que la violencia contra la mujer constituye un problema de salud pública y una grave violación de los derechos humanos. La cifra reportada hasta octubre pasado detalló que los casos contra mujeres jóvenes, de 18 a 29 años, ascendieron a 36.094, las denuncias contra niñas y niños a 30.694 y contra personas adultas mayores a 8.951 incidencias.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque directorios -->
+          <article class="account-card">
+            <header class="account-card-header">
+              <h2>Directorios</h2>
+            </header>
+
+            <div class="account-card-body">
+              <ul class="directory-list">
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Telefono de emergencia - Policia</strong>
+                    <div class="directory-meta">Linea 24/7</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 094 567 456</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Linea de Ayuda - ONG Aurora</strong>
+                    <div class="directory-meta">Atencion psicologica</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +51 123 456 789</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Linea 100</strong>
+                    <div class="directory-meta">Orientacion y soporte emocional</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 100</a></a>
+                  </div>
+                </li>
+                <li class="directory-item">
+                  <div class="directory-info">
+                    <strong>Centros de emergencia Mujer y Familia</strong>
+                    <div class="directory-meta">Atencion integral y multidisciplinaria</div>
+                  </div>
+                  <div class="directory-actions">
+                    <a href="telf:123456789" class="btn-call" aria-label="Llamar policia">📞 +01 419 726 0</a></a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </article>
+
+          
+        </section>
+      </section>
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo Ampara"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf">
+              Política de Privacidad
+            </a>
+            <a href="/Documentos/terminosycondiciones.pdf">
+              Términos y Condiciones
+            </a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">
+              Protección de Datos
+            </a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+    <script src="mi_cuenta.js"></script>
+  </body>
+</html>

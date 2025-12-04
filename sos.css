@@ -1,0 +1,255 @@
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Logo desktop vs móvil */
+.nav-logo-desktop {
+  display: inline-flex;
+}
+
+.nav-logo-mobile {
+  display: none; /* se mostrará solo en móvil */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 175px;
+  height: auto;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #482983;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+/* SOS de la navbar (desktop) */
+.btn-sos {
+  background-color: #ff5b7f;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-sos-desktop {
+  display: inline-block;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* SOS móvil (se muestra solo en mobile) */
+.nav-sos-mobile {
+  display: none;
+}
+
+.sos-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 70vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.btn-back {
+  padding-top: 1.5rem;
+}
+
+.btn-back a {
+  text-decoration: none;
+  border: 2px solid #9076bb;
+  border-radius: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #2d1b4d;
+}
+
+.sos-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2rem;
+
+  border-radius: 1rem;
+}
+
+.sos-hero h2 {
+  color: #2d1b4d;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 75px;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+.sos-txt {
+  color: #2d1b4d;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.sos-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+
+.sos-btn1 {
+  border: 2px solid #9076bb;
+  color: #2d1b4d;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.sos-btn2 {
+  background-color: #ff5b7f;
+  color: #ffffff;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.sos-btn2::before,
+.sos-btn2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(219, 100, 130, 0.6);
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.6s ease-out;
+}
+
+/* Primera onda */
+.sos-btn2:hover::before {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Segunda onda */
+.sos-btn2:hover::after {
+  opacity: 0.8;
+  transform: scale(1.16);
+  transition-delay: 0.15s; /* aparece un poco después */
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block; /* Mostrar botón hamburguesa en móviles */
+    color: black;
+  }
+
+  .nav-links {
+    display: none; /* Ocultar menú horizontal por defecto */
+    flex-direction: column; /* Mostrarlo en vertical al activarse */
+    width: 100%;
+    position: absolute;
+    top: 5rem; /* Debajo del menú fijo */
+    right: 0rem;
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostrar menú al activar la clase */
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #ccc; /* Líneas separadoras */
+  }
+
+  .nav-right {
+    display: none;
+  }
+}

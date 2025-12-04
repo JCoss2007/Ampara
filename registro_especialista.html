@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de usuaria - Ampara</title>
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="registro_especialista.css" />
+    <link rel="stylesheet" href="Pie.css" />
+  </head>
+
+  <body>
+    <!-- SECCIÓN REGISTRO -->
+    <header class="registro-header">
+      <!-- Flecha para volver a escoger tipo de usuario -->
+      <a
+        href="registro.html"
+        class="back-arrow"
+        aria-label="Volver a elegir tipo de usuario"
+      >
+        ←
+      </a>
+
+      <div class="registro-header-inner">
+        <h1>Registro de especialista</h1>
+
+        <!-- Barra de progreso -->
+        <div class="progress-steps">
+          <div class="progress-step">
+            <span class="step-circle">1</span>
+            <span class="step-label">Tipo de usuario</span>
+          </div>
+
+          <div class="progress-step active">
+            <span class="step-circle">2</span>
+            <span class="step-label">Datos de registro</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmación</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="registro">
+      <div class="registro-inner">
+        <!-- Contenedor principal: formulario + ilustración -->
+        <section class="registro-content">
+          <!-- FORMULARIO -->
+          <form
+            class="registro-form"
+            id="formRegistro"
+            action="confirmacion.html"
+          >
+            <div class="form-group">
+              <label for="alias">Nombre completo</label>
+              <input
+                type="text"
+                id="alias"
+                name="alias"
+                placeholder="Nombre que se mostrará en la comunidad"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="Ingresa tu correo"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Crea una contraseña segura"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="colegiatura">Nro. Colegiatura</label>
+              <input
+                type="text"
+                id="colegiatura"
+                name="colegiatura"
+                placeholder="Ejemplo: 12345"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ejemplo: 959636123"
+                required
+              />
+            </div>
+            <!-- Términos -->
+            <div class="form-check">
+              <input type="checkbox" id="terminos" required />
+              <label for="terminos">
+                Acepto los
+                <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf" target="_blank"
+                  >Términos y Condiciones</a
+                >
+                y la
+                <a href="Documentos/Política de Privacidad.pdf" target="_blank"
+                  >Política de Privacidad</a
+                >.
+              </label>
+            </div>
+
+            <!-- Botón -->
+            <button type="submit" class="btn-primary">Crear cuenta</button>
+
+            <p class="login-link">
+              ¿Ya tienes una cuenta?
+              <a href="login.html">Inicia sesión aquí</a>
+            </p>
+          </form>
+
+          <!-- ILUSTRACIÓN -->
+          <div class="registro-illustration">
+            <!-- cambia la ruta si tu imagen está en otra carpeta -->
+            <img
+              src="image/especialista.png"
+              alt="Ilustración usuaria usando el celular"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script>
+      document
+        .getElementById("formRegistro")
+        .addEventListener("submit", function (e) {
+          const password = document.getElementById("password").value.trim();
+          const colegiatura = document
+            .getElementById("colegiatura")
+            .value.trim(); // 👈 AQUÍ LEEMOS EL VALOR
+
+          // 1) Validar longitud de contraseña
+          if (password.length < 8) {
+            e.preventDefault();
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            return;
+          }
+
+          // 2) Validar que la colegiatura solo tenga números
+          const soloNumeros = /^\d+$/;
+          if (!soloNumeros.test(colegiatura)) {
+            e.preventDefault();
+            alert("El N° de colegiatura solo debe contener números.");
+            return;
+          }
+
+          // 3) Validar rango de dígitos (ej: 4 a 8)
+          if (colegiatura.length < 4 || colegiatura.length > 8) {
+            e.preventDefault();
+            alert("El N° de colegiatura debe tener entre 4 y 8 dígitos.");
+            return;
+          }
+
+          // Si pasa todo, el form se envía normal a confirmacion.html ✨
+        });
+    </script>
+  </body>
+</html>

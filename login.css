@@ -1,0 +1,315 @@
+/* ======================= */
+/*      ESTILO AMPARA      */
+/* ======================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f7e9ff; /* tu lila suave */
+  color: #482983;
+}
+
+/* HEADER decorativo */
+.header-banner {
+  width: 100%;
+  height: 260px; /* altura razonable, no 100vh */
+  background-image: url("image/ihclanding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.back-btn {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #482983;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #f7e9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+}
+
+/* Contenedor general debajo del header */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem 3rem;
+  margin-top: -200px; /* SOLO ESTA LÍNEA hace que suba y se meta en el header */
+}
+
+/* Card del login */
+.login-card {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* Logo circular */
+.logo-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+}
+
+.logo-circle img {
+  width: 90px;
+}
+
+/* Texto principal */
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #482983;
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 340px;
+}
+
+.input-field {
+  background: #ffffff;
+  color: #482983;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  outline: none;
+  padding: 14px 18px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.input-field::placeholder {
+  color: #9c8fa7;
+}
+
+.input-field:focus {
+  border: 1px solid #b05adf;
+  box-shadow: 0 0 8px rgba(176, 90, 223, 0.4);
+  background: #ffffff;
+}
+
+/* Recuperar contraseña */
+.forgot-password {
+  align-self: flex-end;
+  color: #b334e1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Botón principal */
+.login-btn {
+  background: #482983;
+  color: white;
+  padding: 14px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.25s;
+  margin-bottom: 1.5rem;
+}
+
+.login-btn:hover {
+  background: #2e165d;
+}
+
+/* Botones sociales */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.social-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+/* Crear cuenta */
+.create-account {
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  color: #4a3b60;
+  text-align: center; /* ⭐ CENTRA EL TEXTO */
+  width: 100%; /* ⭐ Asegura que ocupe todo el ancho */
+}
+
+.create-account a {
+  color: #b334e1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive pequeño */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* ======================= */
+/*   MODAL RECUPERACIÓN    */
+/* ======================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* fondo oscuro */
+  display: none; /* oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* encima de todo */
+}
+
+.modal-card {
+  background: #ffffff;
+  max-width: 600px;
+  width: 90%;
+  padding: 2.5rem 2.8rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #482983;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  font-size: 0.95rem;
+  color: #4a3b60;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+  outline: none;
+  margin-bottom: 1.8rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modal-input:focus {
+  border-color: #b05adf;
+  box-shadow: 0 0 0 3px rgba(176, 90, 223, 0.3);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-btn {
+  min-width: 150px;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, color 0.2s;
+}
+
+.modal-btn.primary {
+  background: #2f9f7f; /* verde tipo “confirmar” */
+  color: #ffffff;
+}
+
+.modal-btn.primary:hover {
+  background: #257e65;
+  transform: translateY(-1px);
+}
+
+.modal-btn.secondary {
+  background: #482983;
+  color: #ffffff;
+}
+
+.modal-btn.secondary:hover {
+  background: #2e165d;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .modal-card {
+    padding: 2rem 1.7rem;
+  }
+}

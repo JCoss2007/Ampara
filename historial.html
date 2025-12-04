@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Historial de mensajes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Usamos los mismos estilos globales / header / sidebar / footer -->
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="mi_cuenta.css" />
+    <!-- Estilos específicos de historial (modal, lista) -->
+    <link rel="stylesheet" href="historial.css" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER (mantener idéntico al de tu proyecto) ===== -->
+    <header class="navbar">
+      <div class="nav-left">
+        <button class="btn-burger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- ===== MENÚ MÓVIL (igual que en tu proyecto) ===== -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ===== CONTENIDO: usamos la misma estructura de sidebar/derecha que en mi_cuenta.html ===== -->
+    <main class="account-page">
+      <section class="account-layout">
+        <!-- Sidebar (idéntico al de mi_cuenta) -->
+        <aside class="account-sidebar">
+          <div class="sidebar-hello">
+            <p class="hello-label">¡HOLA,</p>
+            <p class="hello-name">FAB!</p>
+          </div>
+
+          <nav class="account-menu">
+            <button class="account-menu-item">
+              <span class="icon">👤</span>
+              <a href="mi_cuenta.html">Perfil</a>
+            </button>
+
+            <button class="account-menu-item is-active">
+              <span class="icon">📜</span>
+              <a href="historial.html">Historial</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">💜</span>
+              <a href="favoritos.html">Favoritos</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔔</span>
+              <a href="">Notificaciones</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🛠</span>
+              <a href="reportar.html">Reportar un problema</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔄</span>
+              <a href="login.html">Cerrar sesión</a>
+            </button>
+
+            <button class="account-menu-item danger">
+              <span class="icon">✖</span>
+              <a href="eliminarCuenta.html">Eliminar cuenta</a>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Main content (lista de conversaciones) -->
+        <section class="account-main">
+          <div class="account-header">
+            <button
+              class="btn-back"
+              onclick="window.location.href='mi_cuenta.html'"
+              aria-label="Volver"
+            >
+              <img src="icons/atras.png" alt="Volver" />
+            </button>
+            <h1 class="account-title">Historial de mensajes</h1>
+          </div>
+
+          <div class="messages-list">
+            <article class="message-card">
+              <header>
+                <div class="msg-info">
+                  <h3>Mensaje con psicóloga Ana Ruiz</h3>
+                  <small>12 Feb 2025 · 16:32</small>
+                </div>
+                <span class="msg-status responded">Respondido</span>
+              </header>
+
+              <p class="msg-preview">“Hola, estuve teniendo ansiedad estos días…”</p>
+
+              <a class="msg-open" href="#" data-conv="conv_001">Ver conversación</a>
+            </article>
+
+            <article class="message-card">
+              <header>
+                <div class="msg-info">
+                  <h3>Mensaje con psicólogo Luis Gómez</h3>
+                  <small>03 Feb 2025 · 10:12 AM</small>
+                </div>
+                <span class="msg-status pending">En revisión</span>
+              </header>
+
+              <p class="msg-preview">“Quería consultar sobre un episodio de estrés que tuve…”</p>
+
+              <a class="msg-open" href="#" data-conv="conv_002">Ver conversación</a>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER: idéntico al tuyo (usa Pie.css) ===== -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="icons/logo_ampara_footer.png" alt="Logo Ampara" class="footer-logo" />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf">Política de Privacidad</a>
+            <a href="/Documentos/terminosycondiciones.pdf">Términos y Condiciones</a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"><img src="icons/facebook.png" alt="Facebook" class="social-icon" /></a>
+            <a href="#"><img src="icons/instagram.png" alt="Instagram" class="social-icon" /></a>
+            <a href="#"><img src="icons/youtube.png" alt="Youtube" class="social-icon" /></a>
+            <a href="#"><img src="icons/twitter.png" alt="Twitter" class="social-icon" /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- POPUP CHAT (al final del body) -->
+    <div id="chatModal" class="chat-modal hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+      <div class="chat-panel" role="document">
+        <header class="chat-header">
+          <h2 id="chatTitle" class="chat-title">Conversación</h2>
+          <button id="closeChat" aria-label="Cerrar chat">Cerrar ✕</button>
+        </header>
+
+        <div id="messagesBox" class="messages-box" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="menu_hamburguesa.js"></script>
+    <script src="historial.js"></script>
+  </body>
+</html>

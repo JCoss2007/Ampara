@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrarse - Ampara</title>
+
+    <link rel="stylesheet" href="registro.css" />
+    <link rel="stylesheet" href="Pie.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="registro-header">
+      <!-- Flecha para volver al login -->
+      <a
+        href="login.html"
+        class="back-arrow"
+        aria-label="Volver al inicio de sesión"
+      >
+        ←
+      </a>
+
+      <div class="registro-header-inner">
+        <h1>Regístrate como</h1>
+
+        <!-- Barra de progreso (3 pasos) -->
+        <div class="progress-steps">
+          <div class="progress-step active">
+            <span class="step-circle">1</span>
+            <span class="step-label">Tipo de usuario</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">2</span>
+            <span class="step-label">Datos de registro</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmación</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="registro-container">
+      <!-- CARD 1: Usuario Normal -->
+      <div
+        class="registro-card"
+        onclick="window.location.href='registro_usuario.html'"
+      >
+        <img
+          src="icons/avatarPerfil.png"
+          alt="Usuario Normal"
+          class="registro-icon"
+        />
+        <h2>Usuario normal</h2>
+        <p>
+          Accede a las funcionalidades de la plataforma registrándote como
+          usuaria.
+        </p>
+      </div>
+
+      <!-- CARD 2: Psicólogo -->
+      <div
+        class="registro-card"
+        onclick="window.location.href='registro_especialista.html'"
+      >
+        <img
+          src="icons/avatarPsico.png"
+          alt="Psicólogo"
+          class="registro-icon"
+        />
+        <h2>Psicólogo especialista</h2>
+        <p>
+          Accede a las funcionalidades especiales registrándote como psicólogo.
+        </p>
+      </div>
+    </main>
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="https://www.facebook.com/"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="https://www.youtube.com/"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="https://x.com/"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

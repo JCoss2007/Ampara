@@ -1,0 +1,314 @@
+/* ===== LAYOUT GENERAL ===== */
+
+.secure-video-page {
+  min-height: 100vh;
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background: #482983;
+}
+
+.secure-video-layout {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ===== COLUMNA IZQUIERDA ===== */
+
+.secure-video-info {
+  flex: 1;
+  color: #ffffff;
+}
+
+/* Flecha + título "Videollamada segura" */
+.secure-video-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 16px;
+}
+
+.back-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-video img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* Como el margin ahora lo tiene la fila, el h1 ya no lo necesita */
+.secure-video-title {
+  margin-bottom: 0;
+}
+
+/* En tablet/móvil centramos título + flecha */
+@media (max-width: 1024px) {
+  .secure-video-title-row {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.secure-video-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.secure-video-illustration {
+  max-width: 420px;
+}
+
+.secure-video-illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== PANEL DERECHO (TARJETA VIDEO) ===== */
+
+.secure-video-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 520px;
+  background: #f4e9ff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- HEADER ----- */
+
+.video-card-header {
+  background: #f4e9ff;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-card-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #d2b6ff;
+}
+
+.video-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c2f8a;
+}
+
+.video-user-status {
+  font-size: 13px;
+  color: #5ac27b;
+}
+
+.video-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.video-header-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #7b649f;
+}
+/* Que el link de la X se vea igual que el botón */
+.video-header-close {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- CUERPO: VIDEO PRINCIPAL + MINI VISTA ----- */
+
+.video-card-body {
+  position: relative;
+  background: #fdf6ff;
+  padding: 18px 18px 10px;
+}
+
+.video-main {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  background: #d2b6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-main-placeholder {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Ventanita pequeña con la propia cámara */
+.video-self {
+  position: absolute;
+  right: 26px;
+  bottom: 22px;
+  width: 120px;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background: #b58fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-self-placeholder {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* ----- BARRA DE ESTADO ----- */
+
+.video-status-bar {
+  background: #fdf6ff;
+  padding: 10px 24px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-status-text {
+  font-size: 13px;
+  color: #5a4a75;
+}
+
+.video-timer {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4c2f8a;
+}
+
+/* ----- CONTROLES ----- */
+
+.video-card-footer {
+  padding: 14px 24px 22px;
+  background: #fdf6ff;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.video-control-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #ede0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+}
+
+.video-control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.video-control-end {
+  background: #ff5c7a;
+  color: #ffffff;
+}
+
+.video-control-end:hover {
+  background: #ff345c;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .secure-video-page {
+    padding: 40px 20px;
+  }
+
+  .secure-video-layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .secure-video-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .secure-video-illustration {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .secure-video-title {
+    font-size: 34px;
+  }
+
+  .secure-video-subtitle {
+    font-size: 15px;
+  }
+
+  .video-card {
+    max-width: 100%;
+  }
+
+  .video-card-header,
+  .video-card-body,
+  .video-card-footer,
+  .video-status-bar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .video-self {
+    width: 100px;
+    bottom: 18px;
+    right: 20px;
+  }
+}

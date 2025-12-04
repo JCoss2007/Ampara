@@ -1,0 +1,269 @@
+/* ============================= */
+/*   FONDO COMPLETO DE LA PÁGINA */
+/* ============================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo con imagen + overlay morado */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+      rgba(72, 41, 131, 0.55),
+      rgba(72, 41, 131, 0.55)
+    ),
+    url("image/grupo-mujeres.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*          HEADER / TÍTULO      */
+/* ============================= */
+
+.registro-header {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2rem 0.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.registro-header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.registro-header h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Flecha de regreso */
+.back-arrow {
+  position: absolute;
+  left: 2rem;
+  top: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: rgba(72, 41, 131, 0.55);
+  backdrop-filter: blur(3px);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.back-arrow:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #482983;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/*      BARRA DE PROGRESO        */
+/* ============================= */
+
+.progress-steps {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #f3e9ff;
+  opacity: 0.6;
+}
+
+.progress-step .step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 2px solid #f3e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.progress-step .step-label {
+  max-width: 110px;
+}
+
+/* Paso activo */
+.progress-step.active {
+  opacity: 1;
+}
+
+.progress-step.active .step-circle {
+  background: #ffffff;
+  color: #482983;
+  border-color: #ffffff;
+}
+
+/* ============================= */
+/*        CONTENIDO CENTRAL      */
+/* ============================= */
+
+.confirm-main {
+  min-height: calc(100vh - 220px - 220px); /* header + footer aprox */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.confirm-container {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-card {
+  width: 100%;
+  max-width: 780px;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 1.8rem;
+  padding: 2.4rem 3rem 2.8rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+/* Icono */
+.confirm-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  margin: 0 auto 1.4rem;
+  background: #f3e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-icon span {
+  font-size: 2.4rem;
+  color: #482983;
+}
+
+/* Textos */
+.confirm-card h2 {
+  font-size: 1.9rem;
+  color: #482983;
+  margin: 0 0 0.8rem 0;
+}
+
+.confirm-text {
+  font-size: 1rem;
+  color: #4a4458;
+  margin: 0 0 1.8rem 0;
+  line-height: 1.5;
+}
+
+/* Botón principal (mismo estilo que en registro) */
+.btn-primary {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #482983;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.btn-primary:hover {
+  background-color: #3c226d;
+  box-shadow: 0 8px 20px rgba(33, 9, 64, 0.35);
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/*          RESPONSIVE           */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .registro-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .confirm-card {
+    padding: 2rem 1.8rem 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .registro-header {
+    height: 190px;
+    padding: 0.9rem 1rem 0.5rem;
+  }
+
+  .registro-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .progress-steps {
+    gap: 1rem;
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
+  }
+
+  .confirm-main {
+    padding: 1.8rem 0.9rem 2.5rem;
+  }
+
+  .confirm-card {
+    padding: 1.8rem 1.4rem 2.1rem;
+    border-radius: 1.4rem;
+  }
+
+  .confirm-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .confirm-text {
+    font-size: 0.95rem;
+  }
+}

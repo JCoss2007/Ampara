@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPARA - Nosotros</title>
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="nosotros.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+    
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+    
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+    
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+<!-- MENÚ MÓVIL -->
+<aside class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-panel">
+    <!-- CABECERA DEL MENÚ -->
+    <div class="mobile-menu-header">
+      <div class="user-avatar">F</div>
+
+      <div class="user-info">
+        <p class="user-name">Fab Q</p>
+        <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+      </div>
+
+      <button class="btn-close" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <!-- LINKS DEL MENÚ -->
+    <nav class="mobile-menu-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="articulo_usuario.html">Artículos</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+  </div>
+</aside>
+  <!-- HERO NOSOTROS -->
+  <section class="nosotros-hero">
+    <div class="nosotros-hero-overlay">
+      <div class="nosotros-hero-inner">
+        <div class="nosotros-hero-header">
+          <a href="ampara.html" class="back-btn">
+            <img src="icons/atras.png" alt="Volver" />
+          </a>
+          <h1>Nosotros</h1>
+        </div>
+
+        <div class="nosotros-hero-content">
+          <!-- TEXTO PRINCIPAL -->
+          <div class="nosotros-text-main">
+            <p>
+              Reunimos orientación psicológica y legal, recursos educativos y
+              derivación a servicios especializados, todo en una plataforma
+              fácil de usar y pensada para distintos contextos del país.
+              Trabajamos con enfoque de género, interseccionalidad y derechos
+              humanos; priorizamos la seguridad digital y la protección de
+              datos; y articulamos con instituciones públicas, organizaciones
+              comunitarias y profesionales acreditados.
+            </p>
+          </div>
+
+          <!-- TARJETAS DERECHA -->
+          <div class="nosotros-side-cards">
+            <div class="nosotros-card">
+              <p>
+                Nuestra visión como Ampara es ser una plataforma líder en
+                acompañamiento seguro, accesible y confiable para mujeres que
+                enfrentan situaciones de violencia.
+              </p>
+            </div>
+
+            <div class="nosotros-card">
+              <p>
+                En Ampara, nuestra misión es prevenir y atender la violencia
+                doméstica mediante orientación segura, acompañamiento integral
+                y tecnología accesible que conecta a las personas con ayuda
+                oportuna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUERPO BAJO DEL HERO -->
+  <section class="nosotros-body">
+    <div class="nosotros-body-inner">
+      <!-- Espacio de respiro visual según estándar Ampara -->
+    </div>
+  </section>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+        <footer class="footer">
+          <div class="footer-container">
+            <!-- Logo y nombre de sitio -->
+            <div class="footer-brand">
+              <img
+                src="icons/logo_ampara_footer.png"
+                alt="Logo"
+                class="footer-logo"
+              />
+              <small>© 2025 Todos los derechos reservados</small>
+            </div>
+  
+            <!-- Enlaces legales -->
+            <div class="footer-links">
+              <h4>Legal</h4>
+              <a href="Documentos/Política de Privacidad.pdf"
+                >Política de Privacidad</a
+              >
+              <!-- Dentro de href llama a un documento pdf con la poltica-->
+              <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+                >Términos y Condiciones</a
+              >
+              <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+              <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+            </div>
+  
+            <!-- Redes sociales con íconos personalizados -->
+            <div class="footer-social">
+              <h4>Síguenos</h4>
+              <a href="#"
+                ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="icons/instagram.png"
+                  alt="Instagram"
+                  class="social-icon"
+              /></a>
+              <a href="#"
+                ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+              /></a>
+              <a href="#"
+                ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+              /></a>
+            </div>
+          </div>
+        </footer>
+      </section>
+  </html>
+  <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>

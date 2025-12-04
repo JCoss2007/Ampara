@@ -1,0 +1,339 @@
+/* Título + botón de volver */
+.servicios-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espacio entre flecha y texto */
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn img {
+  width: 40px; /* ajusta el tamaño como quieras */
+  height: 40px;
+  display: block;
+}
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Logo desktop vs móvil */
+.nav-logo-desktop {
+  display: inline-flex;
+}
+
+.nav-logo-mobile {
+  display: none; /* se mostrará solo en móvil */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 175px;
+  height: auto;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #482983;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+/* SOS de la navbar (desktop) */
+.btn-sos {
+  background-color: #ff5b7f;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-sos-desktop {
+  display: inline-block;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* SOS móvil (se muestra solo en mobile) */
+.nav-sos-mobile {
+  display: none;
+}
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #1f1633;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegura que header y footer no se estiren */
+.navbar {
+  flex-shrink: 0;
+}
+
+/* Seccion Servicios */
+.seccion-servicios {
+  flex: 1; /* ocupa todo el espacio entre header y footer */
+  background-color: #482983;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header interno: flecha + título */
+.servicios-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem 1rem;
+}
+
+.seccion-servicios h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+/* Contenedor de las dos columnas */
+.servicios-contenido {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Cada servicio ocupa todo el alto disponible */
+.servicio1,
+.servicio2 {
+  position: relative;
+  height: 100%;
+  min-height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end; /* ya lo tienes, solo lo remarco */
+  overflow: hidden; /* para que todo quede al ras */
+}
+
+/* Mantengo tus imágenes */
+.servicio1 {
+  background-image: url("image/psicologia.jpg");
+}
+
+.servicio2 {
+  background-image: url("image/acompañamiento.webp");
+}
+
+.servicio1-contenido,
+.servicio2-contenido {
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* sigue al ras del borde inferior */
+  transform: translateX(-50%);
+
+  background-color: #ffffff;
+  width: 100%; /* antes 80%, un poco más compacto */
+  max-width: 750px; /* era 520 */
+  margin: 0;
+  padding: 1.2rem 2rem 1.6rem; /* menos alto: antes 1.8rem 2rem 2rem */
+
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+/* Texto dentro del cuadro */
+.servicio1-texto,
+.servicio2-texto {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem; /* antes 1.5rem */
+  line-height: 1.3; /* más compacto */
+  color: #39225a;
+  margin-bottom: 0.8rem;
+}
+
+/* Botones “Conoce más” */
+.servicio1-boton,
+.servicio2-boton {
+  display: inline-block;
+  background-color: #ddcde9;
+  color: #68459f;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.servicio1-boton:hover,
+.servicio2-boton:hover {
+  background-color: #cdb9e2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* ===================== */
+/*   RESPONSIVE AMPARA   */
+/* ===================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .servicios-header {
+    padding: 1.8rem 1.8rem 0.8rem;
+  }
+
+  .seccion-servicios h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Las dos tarjetas pasan a una sola columna */
+  .servicios-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .servicio1,
+  .servicio2 {
+    min-height: 360px; /* altura cómoda para que se vea bien la imagen */
+  }
+
+  .servicio1-contenido,
+  .servicio2-contenido {
+    width: 85%;
+    max-width: 520px;
+    padding: 1.3rem 1.7rem 1.6rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .servicios-header {
+    padding: 1.4rem 1.2rem 0.6rem;
+    gap: 0.75rem;
+  }
+
+  .back-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .seccion-servicios h2 {
+    font-size: 1.9rem;
+  }
+
+  .servicio1,
+  .servicio2 {
+    min-height: 380px;
+  }
+
+  .servicio1-contenido,
+  .servicio2-contenido {
+    width: 90%;
+    max-width: none;
+    padding: 1.1rem 1.4rem 1.4rem;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .servicio1-texto,
+  .servicio2-texto {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .servicio1-boton,
+  .servicio2-boton {
+    font-size: 0.9rem;
+    padding: 0.55rem 1.7rem;
+  }
+}
+
+/* Celulares bien chicos (opcional, pero fino) */
+@media (max-width: 480px) {
+  .servicios-header {
+    padding: 1.2rem 1rem 0.4rem;
+  }
+
+  .seccion-servicios h2 {
+    font-size: 1.7rem;
+  }
+
+  .servicio1,
+  .servicio2 {
+    min-height: 320px;
+  }
+
+  .servicio1-contenido,
+  .servicio2-contenido {
+    width: 92%;
+    padding: 1rem 1.2rem 1.3rem;
+  }
+}

@@ -1,0 +1,558 @@
+/* ===== NAVBAR MÓVIL PACIENTES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center; /* centramos el contenido */
+    align-items: center;
+    padding: 0.7rem 1rem;
+  }
+  /* Botón hamburguesa fijo a la izquierda */
+  .btn-burger {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #482983;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-burger span {
+    width: 22px;
+    height: 3px;
+    border-radius: 999px;
+    background-color: #ffffff;
+  }
+
+  /* Logo realmente centrado */
+  .nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* ocupa todo el ancho para que el centro sea el centro real */
+  }
+
+  .nav-logo {
+    width: 175px;
+    height: auto;
+  }
+
+  /* Ocultamos cosas de la derecha en móvil (si las hubiera) */
+  .nav-right {
+    display: none;
+  }
+
+  /* Si tienes .nav-links también se ocultan en móvil */
+  .nav-links {
+    display: none;
+  }
+}
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6eefc;
+  color: #2b2140;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative; /* <-- agrega esto */
+}
+
+.app-card {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 700px;
+  height: 90vh;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: 300px 1fr; /* sidebar | zona principal */
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background-color: #f1e6ff;
+  border-right: 1px solid #e0cfff;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #b79cff;
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+}
+
+.sidebar-icon {
+  font-size: 1.4rem;
+}
+
+.sidebar-title {
+  font-weight: 600;
+}
+
+/* menú sidebar */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.menu-item {
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #2b2140;
+}
+
+.menu-item:hover {
+  background-color: #e6d7ff;
+}
+
+.menu-item-active {
+  background-color: #ffffff;
+}
+
+.menu-badge {
+  background-color: #482983;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* ===== MAIN CONTENT ===== */
+main.main-content {
+  /* Romper estilos globales del main de ampara.css */
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 380px 1fr; /* lista | chat */
+  height: 100%;
+}
+
+/* ----- LISTA DE CONVERSACIONES ----- */
+.thread-list {
+  border-right: 1px solid #e4dcff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* buscador */
+.search-box {
+  background-color: #f6f0ff;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid #e3d5ff;
+}
+
+.search-icon {
+  font-size: 1.2rem;
+}
+.search-icon img {
+  height: 20px;
+  width: 20px;
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+  color: #2b2140;
+}
+
+.search-box input::placeholder {
+  color: #b3a3e0;
+}
+
+/* items */
+.thread-items {
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.thread-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.thread-item:hover {
+  background-color: #f6f0ff;
+}
+
+.avatar-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #b79cff;
+}
+
+.thread-text h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.thread-text p {
+  font-size: 0.85rem;
+  color: #6b5b8f;
+}
+
+/* pill SOS */
+.sos-pill {
+  margin-left: auto;
+  background-color: #ff5b7f;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* ----- PANEL DE CHAT ----- */
+.chat-panel {
+  padding: 1.5rem 2rem; /* un poco de aire a los lados */
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  width: 100%;
+}
+
+/* encabezado paciente */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chat-patient-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #f1e6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-patient-label {
+  font-weight: 600;
+}
+
+/* guideline */
+.chat-guideline {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* historial */
+.chat-history {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e7ddff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-height: 150px;
+  width: 100%;
+}
+
+.bubble {
+  max-width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.bubble-patient {
+  border: 2px solid #c8b3ff;
+  background-color: #fdfbff;
+}
+
+.bubble-template {
+  background-color: #f4eaff;
+}
+
+/* input area */
+.chat-input-area {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.chat-input-wrapper {
+  position: relative;
+}
+
+/* Aseguramos que el textarea tenga espacio para el ícono */
+.chat-input-wrapper textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  border-radius: 12px;
+  border: 1px solid #e1d3ff;
+  padding: 0.85rem 3.5rem 0.85rem 1rem; /* más padding a la derecha */
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.chat-input-wrapper textarea:focus {
+  border-color: #8b6ae8;
+}
+
+/* Botón con el ícono de enviar */
+.btn-send {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-send img {
+  width: 26px; /* ajusta el tamaño según tu PNG */
+  height: 26px;
+}
+.chat-input-area textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  border-radius: 12px;
+  border: 1px solid #e1d3ff;
+  padding: 0.85rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.chat-input-area textarea:focus {
+  border-color: #8b6ae8;
+}
+
+/* acciones */
+.chat-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #482983;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #ff5b7f;
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVE TABLET (<= 1100px) ===== */
+@media (max-width: 1100px) {
+  .app-card {
+    grid-template-columns: 260px 1fr; /* sidebar un poco más angosta */
+  }
+
+  main.main-content {
+    grid-template-columns: 320px 1fr; /* lista + chat un poco más compactos */
+  }
+}
+
+/* ===== RESPONSIVE STACK (<= 900px) ===== */
+@media (max-width: 900px) {
+  .app-wrapper {
+    padding: 1rem;
+  }
+
+  .app-card {
+    height: auto;
+    max-width: 100%;
+    grid-template-columns: 1fr; /* UNA sola columna */
+    grid-template-rows: auto auto; /* sidebar arriba, main abajo */
+  }
+
+  /* Sidebar ocupa la primera fila, a lo ancho */
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* Main (lista + chat) pasa a la segunda fila y también a una sola columna */
+  main.main-content {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    grid-template-columns: 1fr; /* lista y chat se apilan verticalmente */
+  }
+
+  .thread-list {
+    border-right: none;
+    border-bottom: 1px solid #e4dcff;
+  }
+
+  .chat-panel {
+    padding: 1rem;
+  }
+}
+
+/* ===== RESPONSIVE MOBILE (<= 600px) ===== */
+@media (max-width: 600px) {
+  .app-wrapper {
+    padding: 0.75rem;
+  }
+
+  .app-card {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .sidebar-header {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .thread-list {
+    padding: 1rem 0.8rem;
+  }
+
+  .chat-panel {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .chat-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .chat-history {
+    min-height: 120px;
+    padding: 0.8rem;
+  }
+
+  .chat-input-wrapper textarea {
+    min-height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .chat-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ===== NAVBAR MÓVIL PACIENTES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center; /* centramos el contenido */
+    align-items: center;
+    padding: 0.7rem 1rem;
+  }
+}
+/* ===== FLECHA DE REGRESO ESTILO AMPARA ===== */
+.back-floating {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;            /* ahora va a la IZQUIERDA */
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  text-decoration: none;
+}
+
+.back-floating img {
+  width: clamp(26px, 5vw, 50px);
+  height: clamp(26px, 5vw, 50px);
+  display: block;
+  background-color: #482983;  /* círculo morado */
+  border-radius: 999px;       /* bien redondito */
+}
+
+/* Ajustes en móvil */
+@media (max-width: 768px) {
+  .back-floating {
+    top: 1rem;
+    left: 1rem;
+  }
+}

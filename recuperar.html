@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampara - Enlace expirado</title>
+
+    <link rel="stylesheet" href="recuperar.css" />
+    <link rel="stylesheet" href="Pie.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  
+    <header class="registro-header">
+      <a href="login.html" class="back-arrow">←</a>
+    </header>
+  
+    <main class="recover-layout">
+      <section class="recover-card">
+        <h1 class="recover-title">Recuperar contraseña</h1>
+  
+        <p class="recover-text">
+          Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.
+        </p>
+  
+        <form onsubmit="enviarEnlace(event)" class="recover-form">
+          <input
+            type="email"
+            id="correo-recuperar"
+            class="recover-input"
+            placeholder="Ingresa tu correo electrónico"
+            required
+          />
+  
+          <button type="submit" class="recover-btn">
+            Enviar enlace
+          </button>
+        </form>
+  
+        <p class="recover-help">
+          Si el correo existe, te enviaremos un enlace para restablecer tu contraseña.
+        </p>
+  
+        <a href="login.html" class="volver-login">
+          Volver al inicio de sesión
+        </a>
+      </section>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+        <footer class="footer">
+          <div class="footer-container">
+            <!-- Logo y nombre de sitio -->
+            <div class="footer-brand">
+              <img
+                src="icons/logo_ampara_footer.png"
+                alt="Logo"
+                class="footer-logo"
+              />
+              <small>© 2025 Todos los derechos reservados</small>
+            </div>
+  
+            <!-- Enlaces legales -->
+            <div class="footer-links">
+              <h4>Legal</h4>
+              <a href="Documentos/Política de Privacidad.pdf"
+                >Política de Privacidad</a
+              >
+              <!-- Dentro de href llama a un documento pdf con la poltica-->
+              <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+                >Términos y Condiciones</a
+              >
+              <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+              <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+            </div>
+  
+            <!-- Redes sociales con íconos personalizados -->
+            <div class="footer-social">
+              <h4>Síguenos</h4>
+              <a href="#"
+                ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="icons/instagram.png"
+                  alt="Instagram"
+                  class="social-icon"
+              /></a>
+              <a href="#"
+                ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+              /></a>
+              <a href="#"
+                ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+              /></a>
+            </div>
+          </div>
+        </footer>
+    </main>
+    <!-- MODAL ÉXITO (diseño distinto al de tu compa) -->
+  <div id="modal-exito" class="modal-overlay">
+    <div class="modal-card">
+      <h2 class="modal-title">¡Listo!</h2>
+      <p class="modal-text">
+        Si el correo está registrado en Ampara, te enviamos un enlace para restablecer tu contraseña.
+        Revisa tu bandeja de entrada y la carpeta de spam.
+      </p>
+      <button type="button" class="modal-btn" onclick="cerrarExito()">
+        Entendido
+      </button>
+    </div>
+  </div>
+  <script src="login.js"></script>
+  </body>
+</html>

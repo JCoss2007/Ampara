@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ampara - Nueva contraseña</title>
+
+    <link rel="stylesheet" href="recuperar.css" />
+    <link rel="stylesheet" href="nueva_contraseña.css" />
+    <link rel="stylesheet" href="Pie.css" />
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <header class="registro-header">
+    <a href="recuperar.html" class="back-arrow">←</a>
+  </header>
+
+  <body>
+    <!-- Fondo lila igual que recuperar -->
+    <main class="login-container">
+      <section class="login-card">
+        <h1 class="login-title">Crear nueva contraseña</h1>
+        <p class="login-subtitle">
+          Elige una nueva contraseña segura para tu cuenta Ampara y confírmala
+          para continuar.
+        </p>
+
+        <form class="login-form">
+          <div class="input-group">
+            <label for="new-password" class="input-label"
+              >Nueva contraseña</label
+            >
+            <input
+              type="password"
+              id="new-password"
+              class="input-field"
+              placeholder="Ingresa tu nueva contraseña"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="confirm-password" class="input-label"
+              >Confirmar contraseña</label
+            >
+            <input
+              type="password"
+              id="confirm-password"
+              class="input-field"
+              placeholder="Vuelve a escribir tu contraseña"
+              required
+            />
+          </div>
+
+          <p class="password-hint">
+            La contraseña debe tener al menos 8 caracteres. Te recomendamos
+            combinar mayúsculas, minúsculas y números.
+          </p>
+
+          <!-- Mensaje de error opcional (lo puedes usar luego con JS) -->
+          <p class="password-error" id="password-error">
+            <!-- Aquí podrías mostrar: "Las contraseñas no coinciden" -->
+          </p>
+        </form>
+        <form class="login-form" onsubmit="guardarNuevaContrasena(event)">
+          <!-- campos y textos -->
+
+          <button type="submit" class="login-btn">
+            Guardar nueva contraseña
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="login.js"></script>
+  </body>
+</html>

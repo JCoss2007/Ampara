@@ -1,0 +1,351 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6eefc;
+  color: #2b2140;
+}
+
+/* NAVBAR base (desktop) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 175px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-burger span {
+  width: 22px;
+  height: 3px;
+  background: #482983;
+  border-radius: 10px;
+}
+
+/* ========== HERO ========== */
+/* ===== HERO FORO ANÓNIMO ===== */
+
+.foro-hero {
+  position: relative;
+  min-height: 460px;
+  background-image: url("image/ihclanding.png"); /* usa tu misma imagen */
+  background-size: cover;
+  background-position: center;
+}
+
+/* capa moradita encima de la foto */
+.foro-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 22, 88, 0.55); /* morado translúcido */
+}
+
+/* contenedor interno que empuja la tarjeta hacia la derecha */
+.foro-hero-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 3rem 4.5rem;
+  display: flex;
+  align-items: center; /* centra en altura */
+  gap: 3rem;
+  z-index: 1;
+}
+.foro-hero-text {
+  color: #ffffff;
+  max-width: 460px;
+}
+
+.foro-hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.foro-hero-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* TARJETA DEL FORO */
+.foro-card {
+  background-color: #ffffff;
+  border-radius: 32px;
+  padding: 2.2rem 2.6rem;
+  max-width: 560px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.foro-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: #efe5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.foro-card-icon img {
+  width: 56px;
+  height: 56px;
+}
+
+.foro-card h2 {
+  font-size: 1.8rem;
+  color: #2b2140;
+}
+
+.foro-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a3e66;
+}
+
+/* Card clickeable derecha */
+.foro-card-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: auto; /* empuja la card hacia la derecha */
+}
+
+/* Hover de la card */
+.foro-card-link:hover .foro-card {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.26);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ========== TARJETAS DE SERVICIOS ========== */
+.features-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center; /* centramos la única card */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  width: 100%;
+  text-decoration: none;
+  color: #2b2140;
+}
+
+.feature-icon img {
+  width: 55px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* cuando está abierto */
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.features-section {
+  display: flex;
+  justify-content: center;
+}
+/* ===== Responsive ===== */
+
+@media (max-width: 950px) {
+  .foro-hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 3rem 1.8rem 3.8rem;
+  }
+
+  .foro-card-link {
+    margin-left: 0;
+    margin-top: 1.8rem;
+  }
+
+  .foro-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .foro-hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .foro-card {
+    padding: 1.8rem 1.6rem;
+    border-radius: 24px;
+  }
+}
+/* Botones del hero en vista móvil */
+
+/* ===== Navbar móvil (psicólogo) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center; /* centra todo horizontalmente */
+    align-items: center;
+    padding: 0.7rem 1rem;
+    position: relative; /* permite posicionar el menú a la izquierda */
+  }
+
+  /* Menú hamburguesa siempre pegado a la izquierda */
+  .btn-burger {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background-color: #482983;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .btn-burger span {
+    background: #ffffff;
+  }
+
+  /* Centra realmente el logo */
+  .nav-left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-logo {
+    width: 135px; /* tamaño ideal */
+  }
+
+  /* Ocultar "Mi cuenta" en móvil (opcional) */
+  .nav-right {
+    display: none;
+  }
+}
+/* ===== FIX PANEL LATERAL (blanco completo y sin corte) ===== */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 360px;
+  height: 100vh;
+  background-color: #ffffff; /* fondo firme */
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 9999;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fondo total del menú */
+.mobile-menu-header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Links también con fondo blanco */
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.4rem 2rem; /* le damos aire a la izquierda */
+}
+
+.mobile-menu-links a {
+  text-decoration: none;
+  color: #2b2140;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}

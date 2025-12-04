@@ -1,0 +1,295 @@
+/* Usa los estilos de menú-hamburguesa para el header.
+   Aquí solo maqueteamos la página de cuenta. */
+
+.account-page {
+  background-color: #f6eefc;
+  min-height: calc(100vh - 70px);
+  padding: 2rem 2.5rem;
+}
+
+.account-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2.5rem;
+}
+
+/* ===== Sidebar ===== */
+.account-sidebar {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-hello {
+  margin-bottom: 2rem;
+}
+
+.hello-label {
+  font-size: 1.1rem;
+  color: #8b6ae8;
+}
+
+.hello-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #482983;
+}
+
+.account-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.account-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #2b2140;
+  text-align: left;
+}
+
+.account-menu-item .icon {
+  font-size: 1.2rem;
+}
+
+.account-menu-item.is-active {
+  background-color: #f1e6ff;
+  font-weight: 600;
+}
+
+.account-menu-item.danger {
+  color: #ff4c6a;
+}
+
+/* ===== Main ===== */
+.account-main {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 2rem 2rem 2.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.account-title {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  color: #482983;
+}
+
+/* Tarjetas de datos */
+.account-card {
+  border-radius: 18px;
+  border: 1px solid #e4dcff;
+  padding: 1.5rem 1.5rem 1.2rem;
+  margin-bottom: 1rem;
+  background-color: #faf8ff;
+}
+
+.account-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.account-card-header h2 {
+  font-size: 1.05rem;
+}
+
+.btn-outline {
+  border-radius: 999px;
+  border: 1px solid #8b6ae8;
+  background-color: #ffffff;
+  color: #8b6ae8;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.account-card-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.field-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #8d81b3;
+}
+
+.field-value {
+  font-size: 0.95rem;
+}
+
+.account-layout a {
+  text-decoration: none;
+  color: #482983;
+}
+
+.container-delete {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-delete h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+}
+
+.btn-cancell-delete {
+  padding: 1rem;
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.05rem solid #482983;
+}
+
+.btn-delete {
+  padding: 1rem;
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.05rem solid #482983;
+}
+
+.btn-cancell-delete:hover {
+  background-color: #ff4c6a;
+  border: transparent;
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #ff4c6a;
+  border: transparent;
+  color: white;
+}
+
+/* al hacer hover en el contenedor, forzamos que el enlace dentro sea blanco */
+.btn-cancell-delete:hover a,
+.btn-delete:hover a {
+  color: #ffffff;
+}
+
+.delete-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #482983;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.delete-message.show {
+  opacity: 1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-page {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+  }
+}
+@media (max-width: 600px) {
+  /* El layout ya es 1 columna pero ajustamos mejor */
+  .account-sidebar {
+    order: -1;
+    padding: 1.2rem;
+  }
+
+  .account-main {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .account-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Items de menú ocupan todo el ancho tipo app */
+  .account-menu-item {
+    padding: 1rem;
+    border-bottom: 1px solid #f1e6ff;
+    border-radius: 0;
+  }
+
+  .sidebar-hello {
+    text-align: center;
+  }
+
+  .hello-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Contenedor general de eliminar cuenta */
+  .container-delete h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Botones ya no deben tener ese padding gigante */
+  .btns {
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-cancell-delete,
+  .btn-delete {
+    padding: 0.8rem 1rem;
+    width: 45%;
+    text-align: center;
+  }
+}
+@media (max-width: 380px) {
+  .btns {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem 1rem;
+  }
+
+  .btn-cancell-delete,
+  .btn-delete {
+    width: 100%;
+  }
+}

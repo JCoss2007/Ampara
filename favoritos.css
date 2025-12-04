@@ -1,0 +1,186 @@
+/* Usa los estilos de menú-hamburguesa para el header.
+   Aquí solo maqueteamos la página de cuenta. */
+
+.account-page {
+  background-color: #f6eefc;
+  min-height: calc(100vh - 70px);
+  padding: 2rem 2.5rem;
+}
+
+.account-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2.5rem;
+}
+
+/* ===== Sidebar ===== */
+.account-sidebar {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-hello {
+  margin-bottom: 2rem;
+}
+
+.hello-label {
+  font-size: 1.1rem;
+  color: #8b6ae8;
+}
+
+.hello-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #482983;
+}
+
+.account-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.account-menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #2b2140;
+  text-align: left;
+}
+
+.account-menu-item .icon {
+  font-size: 1.2rem;
+}
+
+.account-menu-item.is-active {
+  background-color: #f1e6ff;
+  font-weight: 600;
+}
+
+.account-menu-item.danger {
+  color: #ff4c6a;
+}
+
+/* ===== Main ===== */
+.account-main {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 2rem 2rem 2.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.account-title {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  color: #482983;
+}
+
+/* Tarjetas de datos */
+.account-card {
+  border-radius: 18px;
+  border: 1px solid #e4dcff;
+  padding: 1.5rem 1.5rem 1.2rem;
+  margin-bottom: 1rem;
+  background-color: #faf8ff;
+}
+
+.account-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.account-card-header h2 {
+  font-size: 1.05rem;
+}
+
+.btn-outline {
+  border-radius: 999px;
+  border: 1px solid #8b6ae8;
+  background-color: #ffffff;
+  color: #8b6ae8;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* NEWS: cada noticia apilada (imagen izq, texto der). */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Cada noticia */
+.new {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* miniatura + contenido */
+  gap: 1rem;
+  align-items: start;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: transparent; /* cambia si quieres fondo */
+}
+
+/* imagen de la noticia (dentro del primer .field-group) */
+.new .field-group img {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Asegura que la descripción ocupe el resto */
+.new .field-group + .field-group {
+  align-self: start;
+}
+
+/* Espaciado entre artículos (opcional) */
+.account-card-body .new + .new {
+  margin-top: 0.6rem;
+}
+
+.account-layout a{
+  text-decoration: none;
+  color: #482983;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+  .account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-page {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* Versión tipo “Yanbal mobile”: sidebar como lista grande */
+@media (max-width: 600px) {
+  .account-sidebar {
+    order: -1; /* Sidebar arriba en mobile */
+  }
+
+  .sidebar-hello {
+    text-align: center;
+  }
+
+  .account-menu-item {
+    border-radius: 0;
+    border-bottom: 1px solid #f1e6ff;
+  }
+}

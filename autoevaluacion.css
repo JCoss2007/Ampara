@@ -1,0 +1,268 @@
+/* ===== AUTOEVALUACIÓN ===== */
+
+.selftest-hero {
+  background-color: #482983; /* morado principal */
+  color: #ffffff;
+  padding: 3rem 2rem 4rem;
+}
+
+.selftest-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header de la página */
+.selftest-header-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.selftest-header h1 {
+  font-size: 2.6rem;
+}
+
+.selftest-header p {
+  font-size: 0.95rem;
+  opacity: 0.95;
+  max-width: 720px;
+}
+
+/* Botón de volver */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Layout principal: test + tarjeta lateral */
+.selftest-layout {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.2fr);
+  gap: 2rem;
+}
+
+/* Tarjeta del test */
+.selftest-card {
+  background-color: #fdf7ff;
+  border-radius: 20px;
+  padding: 2rem 2.2rem;
+
+  color: #2b2140;
+}
+
+.selftest-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.selftest-intro {
+  font-size: 0.95rem;
+  color: #4a3e66;
+  margin-bottom: 1.5rem;
+}
+
+/* Formulario */
+.selftest-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.question-group {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #ebdefe;
+}
+
+.question-group:last-of-type {
+  border-bottom: none;
+}
+
+.question-text {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: #2b2140;
+}
+
+/* Escala de opciones */
+.scale-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.scale-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  background-color: #f1e6ff;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+.scale-options input[type="radio"] {
+  accent-color: #482983;
+}
+
+/* Efecto tipo "pill" */
+.scale-options label:hover {
+  background-color: #d6c1ff;
+}
+
+/* Botones inferiores */
+.selftest-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: #482983;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #3c206e;
+}
+
+.btn-secondary {
+  background-color: #f1e6ff;
+  color: #2b2140;
+}
+
+.btn-secondary:hover {
+  background-color: #d6c1ff;
+}
+
+.selftest-note {
+  font-size: 0.85rem;
+  color: #4a3e66;
+  margin-top: 0.5rem;
+}
+
+/* Tarjeta lateral */
+.selftest-sidecard {
+  background-color: #f4eaff;
+  border-radius: 20px;
+  padding: 1.8rem 1.6rem;
+  color: #2b2140;
+}
+
+.selftest-sidecard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.selftest-sidecard ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #3a314f;
+}
+
+.selftest-sidecard li + li {
+  margin-top: 0.4rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet: una sola columna y un poco menos de padding */
+@media (max-width: 960px) {
+  .selftest-hero {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .selftest-layout {
+    grid-template-columns: 1fr; /* test arriba, tarjeta abajo */
+  }
+
+  .selftest-sidecard {
+    order: -1; /* info arriba en pantallas chicas */
+  }
+}
+
+/* Móvil mediano */
+@media (max-width: 720px) {
+  .selftest-hero {
+    padding-inline: 1.25rem;
+    padding-top: 2.1rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .selftest-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .selftest-header h1 {
+    font-size: 2rem;
+  }
+
+  .selftest-header p {
+    font-size: 0.9rem;
+  }
+
+  .selftest-card {
+    padding: 1.6rem 1.4rem;
+  }
+
+  .scale-options {
+    gap: 0.5rem;
+  }
+
+  /* Que las opciones sean más cómodas de tocar */
+  .scale-options label {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Móvil chico */
+@media (max-width: 480px) {
+  .selftest-hero {
+    padding: 1.8rem 1rem 2.4rem;
+  }
+
+  .selftest-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .selftest-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  /* Botones uno debajo del otro */
+  .selftest-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

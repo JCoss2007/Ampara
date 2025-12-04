@@ -1,0 +1,304 @@
+/* ===== LAYOUT GENERAL ===== */
+
+.secure-call-page {
+  min-height: 100vh;
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background: #482983;
+}
+
+.secure-call-layout {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ===== COLUMNA IZQUIERDA ===== */
+
+.secure-call-info {
+  flex: 1;
+  color: #ffffff;
+}
+
+.secure-call-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.secure-call-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.secure-call-illustration {
+  max-width: 420px;
+}
+
+.secure-call-illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flecha + título "Llamada segura" */
+.secure-call-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 16px;          /* reemplaza al margin-bottom del título */
+}
+
+.back-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-call img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* Como ahora el margin está en la fila, quitamos el del h1 */
+.secure-call-title {
+  margin-bottom: 0;
+}
+
+/* En tablet/móvil centramos título + flecha */
+@media (max-width: 1024px) {
+  .secure-call-title-row {
+    justify-content: center;
+  }
+}
+
+/* ===== PANEL DERECHA (TARJETA LLAMADA) ===== */
+
+.secure-call-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.call-card {
+  width: 100%;
+  max-width: 520px;
+  background: #f4e9ff; /* lila clarito tipo Chat Seguro */
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- HEADER ----- */
+
+.call-card-header {
+  background: #f4e9ff;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call-card-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.call-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #d2b6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.call-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c2f8a;
+}
+
+.call-user-status {
+  font-size: 13px;
+  color: #5ac27b; /* verdecito para “En línea” */
+}
+
+.call-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.call-header-btn {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #7b649f;
+}
+
+/* ----- CUERPO DE LA TARJETA ----- */
+
+.call-card-body {
+  padding: 24px 28px 16px;
+  background: #fdf6ff;
+}
+
+.call-state-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b649f;
+  margin-bottom: 8px;
+}
+
+.call-state-text {
+  font-size: 14px;
+  color: #5a4a75;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.call-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 14px 18px;
+  background: #ede0ff;
+}
+
+.call-status-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4c2f8a;
+}
+
+.call-timer {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4c2f8a;
+}
+
+/* ----- FOOTER: BOTONES LLAMADA ----- */
+
+.call-card-footer {
+  padding: 18px 28px 24px;
+  background: #fdf6ff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.call-control-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #ede0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+}
+
+.call-control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.call-control-end {
+  background: #ff5c7a;
+  color: #ffffff;
+}
+
+.call-control-end:hover {
+  background: #ff345c;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .secure-call-page {
+    padding: 40px 20px;
+  }
+
+  .secure-call-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .secure-call-info {
+    align-items: center;
+  }
+
+  .secure-call-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .secure-call-illustration {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .secure-call-title {
+    font-size: 34px;
+  }
+
+  .secure-call-subtitle {
+    font-size: 15px;
+  }
+
+  .call-card {
+    max-width: 100%;
+  }
+
+  .call-card-header,
+  .call-card-body,
+  .call-card-footer {
+    padding: 16px 18px;
+  }
+}
+
+/* Flecha + título "Llamada segura" */
+
+
+.back-call img {
+  width: clamp(24px, 4vw, 36px);
+  height: clamp(24px, 4vw, 36px);
+  display: block;
+}
+
+/* En móvil centramos el título + flecha */
+@media (max-width: 1024px) {
+  .secure-call-title-row {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,233 @@
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-link img {
+  cursor: pointer;
+}
+/* ============================
+   BOTÓN HAMBURGUESA
+   ============================ */
+
+/* Oculto en desktop por defecto */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* En móvil lo mostramos como círculo morado */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.9rem 1.2rem;
+    flex-wrap: nowrap;
+  }
+
+  /* IZQUIERDA: solo burger */
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Logo desktop se oculta en móvil */
+  .nav-logo-desktop {
+    display: none;
+  }
+
+  /* Logo móvil va al centro de la barra */
+  .nav-logo-mobile {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Ocultamos enlaces centrales en mobile */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* DERECHA: SOS visible, Mi cuenta opcional */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 0;
+  }
+
+  .nav-links .btn-sos {
+    display: none;
+  }
+
+  .nav-sos-mobile {
+    display: inline-block;
+  }
+
+  .btn-cuenta {
+    display: none;
+  }
+
+  /* Botón hamburguesa */
+  .btn-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #482983;
+    border: none;
+  }
+
+  .btn-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    margin: 3px 0;
+  }
+}
+
+/* ======================================= */
+/*    PANEL LATERAL (MENU HAMBURGUESA)     */
+/* ======================================= */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.18);
+  transform: translateX(-100%); /* OCULTO */
+  transition: transform 0.35s ease;
+  z-index: 3000;
+  padding-top: 1rem;
+}
+
+/* Cuando está abierto */
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* Contenido interno */
+.mobile-menu-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.2rem;
+}
+
+/* HEADER DEL MENÚ */
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee5ff;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #a56bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2b2140;
+}
+
+.user-link {
+  font-size: 0.8rem;
+  color: #7b5cc5;
+  text-decoration: none;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* LINKS DEL MENÚ */
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.4rem 2rem;
+}
+
+.mobile-menu-links a {
+  text-decoration: none;
+  color: #2b2140;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.mobile-menu-links a:hover {
+  color: #482983;
+}
+/* ===== CONTROL CORRECTO DE LOGOS ===== */
+
+/* Desktop: solo mostrar el logo desktop */
+.nav-logo-desktop {
+  display: flex;
+}
+
+.nav-logo-mobile {
+  display: none;
+}
+
+/* Mobile: ocultar desktop y mostrar móvil */
+@media (max-width: 768px) {
+  .nav-logo-desktop {
+    display: none;
+  }
+
+  .nav-logo-mobile {
+    display: flex !important;
+    margin: 0 auto;
+  }
+}
+/* ============================= */
+/*   OCULTAR TODO ESTO EN DESKTOP */
+/* ============================= */
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .btn-burger {
+    display: none !important;
+  }
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMPARA - Chat Anónimo Seguro</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="chatanonimo.css" />
+  </head>
+  <body>
+  </head>
+  <body>
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <!-- CABECERA DEL MENÚ -->
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <!-- LINKS DEL MENÚ -->
+        <nav class="mobile-menu-links">
+          <a href="servicios.html">Servicios</a>
+          <a href="articulo_usuario.html">Artículos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="chat-main-container">
+        <section class="chat-layout">
+            
+            <div class="chat-info-side">
+
+  <div class="titulo-chat-anonimo">
+    <a href="ampara.html" class="back-chat" aria-label="Volver">
+      <img src="icons/atras.png" alt="Volver">
+    </a>
+
+    <h1>Chat anónimo</h1>
+  </div>
+
+  <img src="image/ilustracion.png" 
+       alt="Ilustración mujer en celular" 
+       class="chat-illustration">
+
+</div>
+
+            <div class="chat-window-card">
+                
+                <div class="chat-window-header">
+                    <div class="specialist-info">
+                        <div class="avatar-circle">
+                            <img src="icons/atencion_mujer.png" alt="Psicólogo">
+                        </div>
+                        <div class="specialist-text">
+                            <h3>Psicólogo01</h3>
+                            <span class="status-indicator">Online</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-header-actions">
+                        
+                        <div class="menu-container">
+                            <button id="optionsBtn" class="btn-icon" aria-label="Opciones">
+                                <img src="icons/menu.png" alt="Opciones">
+                            </button>
+
+                            <div id="dropdownMenu" class="dropdown-menu">
+                                <button id="btnEndChat" class="dropdown-item danger">
+                                    <span>Finalizar chat</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <a href="ampara.html" class="btn-icon btn-close-chat" aria-label="Cerrar chat">✕</a>
+                    </div>
+                </div>
+
+                <div class="chat-messages-area" id="chatMessagesArea">
+                    <div class="message received">
+                        <div class="message-bubble">
+                            <p>"Bienvenida a chat anonimo de Ampara. Tu seguridad es nuestra prioridad. Estoy aquí para brindarte la orientación y el apoyo que necesitas en este momento. </p>
+                            <p><br>Cuentame, ¿Cuál es tu consulta?</p>
+                        </div>
+                        <span class="message-time">10:00 AM</span>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <form id="chatForm" class="chat-input-wrapper">
+                        
+                        <button type="button" id="micButton" class="btn-mic" aria-label="Grabar audio">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E57C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                <line x1="12" y1="19" x2="12" y2="23"></line>
+                                <line x1="8" y1="23" x2="16" y2="23"></line>
+                            </svg>
+                        </button>
+
+                        <input type="text" id="messageInput" placeholder="Escribe aquí y pulsa enter..." autocomplete="off">
+                        
+                        <button type="submit" class="btn-send" id="sendButton">
+                            <img src="icons/enviarchat.png" alt="Enviar">
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+     <!-- PIE DE PÁGINA -->
+     <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="menu_hamburguesa.js"></script>
+    <script src="chatanonimo.js"></script>
+  </body>
+</html>

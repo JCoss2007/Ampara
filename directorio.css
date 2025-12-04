@@ -1,0 +1,278 @@
+:root {
+  --primary-purple: #4a148c;
+  --light-purple: #f6eefc;
+  --dark-text: #2b2140;
+  --pink-sos: #ff5b7f;
+  --dark-background: #4a148c;
+  --card-hover-purple: #6c46b5;
+  --search-white: #ffffff;
+  --search-placeholder: #888;
+}
+
+/* 1. Contenedor Principal */
+.directory-page-container {
+  background-color: var(--dark-background);
+  max-width: 100%;
+  margin: 0;
+  padding: 3rem 2rem;
+  color: white;
+  min-height: 90vh;
+}
+
+/* 2. Cabecera */
+.directory-header {
+  background-color: transparent;
+  color: white;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+}
+
+.titulo-fila {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.directory-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.directory-header p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  margin-top: 10px;
+}
+
+.btn-retroceso img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* 3. Buscador */
+.main-search-bar {
+  display: flex;
+  background-color: var(--search-white);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  max-width: 800px;
+}
+
+#main-search-input {
+  flex-grow: 1;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--dark-text);
+  outline: none;
+}
+
+.search-button {
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: var(--card-hover-purple);
+}
+
+.search-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 4. Filtros */
+.filter-controls-standalone {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: left;
+}
+
+.filter-controls-standalone label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.filter-controls-standalone input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--pink-sos);
+}
+
+/* 5. Layout Principal */
+.directory-main-content {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.directory-list {
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 800px;
+}
+
+/* 6. Sidebar (Imagen lateral) */
+.directory-sidebar {
+  width: 300px;
+  padding-top: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.directory-sidebar img {
+  width: 100%;
+  max-width: 250px;
+  opacity: 0.3;
+  filter: invert(100%) hue-rotate(240deg) saturate(0.5);
+}
+
+/* 7. Tarjetas */
+.directory-card {
+  display: flex;
+  background-color: var(--search-white);
+  color: var(--dark-text);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  transition: transform 0.2s;
+  min-height: 130px;
+}
+
+.directory-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-purple);
+  padding: 10px;
+  margin-right: 1.5rem;
+  object-fit: contain;
+}
+
+.card-details {
+  flex: 1;
+}
+
+.line-name {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.line-description {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.line-number {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 8. Botones de Acción */
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  min-width: 140px;
+}
+
+.favorite-btn, .call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 1px solid var(--primary-purple);
+  width: 100%;
+}
+
+/* Estilo Favoritos */
+.favorite-btn {
+  background-color: white;
+  color: var(--primary-purple);
+}
+.favorite-btn img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.favorite-btn:hover {
+    background-color: var(--light-purple);
+}
+
+/* Estilo Llamar (Morado) */
+.call-btn {
+  background-color: var(--primary-purple);
+  color: white;
+  text-align: center;
+}
+.call-btn:hover {
+  background-color: var(--card-hover-purple);
+}
+
+/* Estilo Chatear (Rosado) */
+.chat-btn {
+  background-color: var(--pink-sos);
+  border-color: var(--pink-sos);
+}
+.chat-btn:hover {
+    background-color: #e04a6b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .directory-main-content {
+    flex-direction: column;
+  }
+  .directory-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .directory-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-actions {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    justify-content: space-between;
+  }
+  .favorite-btn, .call-btn {
+      width: 48%;
+  }
+}

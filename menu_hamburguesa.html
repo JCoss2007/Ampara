@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Header con menú móvil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuente -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="menu-hamburguesa.css" />
+    <script src="menu_hamburguesa.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Servicios</a>
+        <a href="foroanonimo.html">Foro anónimo</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+
+        <!-- Botón hamburguesa (solo en móvil) -->
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MENÚ LATERAL MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+
+        <div class="user-info">
+          <p class="user-name">Fab Q</p>
+          <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <nav class="mobile-menu-links">
+        <a href="index.html">Servicios</a>
+        <a href="foroanonimo.html">Foro anónimo</a>
+        <a href="articulo_usuario.css">Articulos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="mi_cuenta.html">Mi cuenta</a>
+      </nav>
+    </aside>
+
+    <!-- Contenido de prueba -->
+    <main class="dummy-content">
+      <h1>Contenido de prueba</h1>
+      <p>
+        Aquí iría el contenido de la página. Este archivo es solo para probar el
+        header con menú móvil.
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Articulo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales de tu proyecto -->
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css"/>
+
+    <!-- Estilos propios de esta página -->
+    <link rel="stylesheet" href="articulo_psicologo.css" />
+    <link rel="stylesheet" href="articuloUsuario.css" />
+
+  </head>
+
+  <body>
+    <header class="navbar">
+      <!-- IZQUIERDA: solo burger -->
+      <div class="nav-left">
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- LOGO SOLO PARA DESKTOP -->
+        <a href="ampara.html" class="nav-logo-link nav-logo-desktop">
+          <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+        </a>
+      </div>
+
+      <!-- LOGO SOLO PARA MÓVIL, IRÁ EN EL CENTRO -->
+      <a href="ampara.html" class="nav-logo-link nav-logo-mobile">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </a>
+
+      <!-- CENTRO (solo desktop) -->
+      <nav class="nav-links">
+        <a href="sos.html" class="btn-sos nav-sos-desktop">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Artículos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA -->
+      <div class="nav-right">
+        <a href="sos.html" class="btn-sos nav-sos-mobile">SOS</a>
+        <a href="mi_cuenta.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL NOTICIAS ===== -->
+    <main class="noticias-container">
+     <div class="titulo-articulos">
+      <a href="ampara.html" class="back-floating" aria-label="Volver">
+        <img src="icons/atras.png" alt="Volver" />
+      </a>
+      <h1>Artículos</h1>
+    </div>
+
+  <p class="subtitulo">
+    Todas nuestros artículos y publicaciones en un solo lugar.
+  </p>
+
+      <!-- BUSCADOR (debajo del subtítulo) -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar por..." />
+        <button aria-label="Buscar">
+          <img src="icons/lupa.png" alt="" />
+        </button>
+      </div>
+
+
+      <!-- LISTADO DE NOTICIAS -->
+      <section class="lista-noticias">
+        <!-- Noticia 1 -->
+        <a class="noticia-link" data-id="1">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autor" class="avatar" />
+            <div>
+              <h3>Comienza tu recorrido hacia el autocuidado</h3>
+              <span class="meta">Alejandra • 28 marzo 2024</span>
+              <p>
+                El autocuidado no es un lujo, es una necesidad. Muchas veces vivimos en piloto automático, atendiendo responsabilidades, rutinas y expectativas externas sin detenernos a preguntarnos cómo estamos realmente. Comenzar un recorrido hacia el autocuidado implica reconocer que tu bienestar importa y que mereces dedicarte tiempo, atención y cariño.
+
+                Practicar autocuidado no significa grandes cambios desde el primer día. Puedes comenzar con acciones simples: establecer límites para proteger tu energía, hacer pausas conscientes durante el día, practicar gratitud, mover tu cuerpo de una manera que disfrutes, alimentar tu mente con pensamientos más amables o permitirte descansar sin culpa.
+
+                Lo importante es recordar que el autocuidado es un camino personal. No se trata de hacerlo perfecto, sino de escucharte, observar tus necesidades y dar pasos pequeños pero consistentes hacia una vida más equilibrada, más ligera y más tuya.
+              </p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Noticia 2 -->
+        <a class="noticia-link" data-id="2">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autora" class="avatar" />
+            <div>
+              <h3>Empatía y Apoya: Claves para fortalecer la comunidad</h3>
+              <span class="meta">Andrea • 01 marzo 2024</span>
+              <p>
+                La empatía es uno de los pilares fundamentales para construir comunidades fuertes, seguras y unidas. No se trata solo de entender lo que otra persona está viviendo, sino de acompañarla desde un lugar humano, sin juicios y con presencia genuina.
+
+                Cuando aprendemos a escuchar con apertura, a validar las emociones de los demás y a ofrecer apoyo sincero, creamos espacios donde las personas pueden sentirse vistas, escuchadas y acompañadas. Una comunidad que practica la empatía se vuelve un refugio en momentos de crisis y un impulsor de bienestar colectivo.
+
+                Fortalecer la comunidad empieza con acciones pequeñas: preguntar cómo está alguien de verdad, ofrecer ayuda sin esperar nada a cambio, dar un mensaje de aliento o simplemente estar disponible. Cada gesto, por pequeño que sea, puede marcar la diferencia en la vida de otra persona.
+              </p>
+            </div>
+          </article>
+        </a>
+        <!-- Noticia 3 -->
+        <a class="noticia-link" data-id="3">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autora" class="avatar" />
+            <div>
+              <h3>Cómo establecer límites saludables sin sentir culpa</h3>
+              <span class="meta">María · 10 abril 2024</span>
+              <p>
+                Establecer límites saludables es un acto de amor propio. Sin embargo, muchas personas sienten culpa al decir “no”, temen decepcionar o perder vínculos importantes. La realidad es que poner límites no crea distancia emocional; al contrario, construye relaciones más equilibradas y respetuosas.
+
+                Un límite es una declaración clara de lo que estás dispuesta a aceptar, tolerar o entregar. Estos pueden ser físicos, emocionales, laborales o incluso digitales. Para establecerlos, es fundamental identificar qué te incomoda, qué te desgasta y qué necesitas para estar bien.
+
+                Decir “no” con calma, expresar tu sentir sin justificarte demasiado y mantener tu decisión son pasos clave. Recuerda que tus necesidades son válidas. No tienes que cargar con lo que no te corresponde ni sacrificar tu bienestar para mantener la paz. Los límites sanos fortalecen tu identidad, tu autonomía y tu relación contigo misma.
+              </p>
+            </div>
+          </article>
+        </a>
+        <!-- Noticia 4 -->
+        <a class="noticia-link" data-id="4">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autora" class="avatar" />
+            <div>
+              <h3>Técnicas sencillas para reducir la ansiedad en tu día a día</h3>
+              <span class="meta">Lucía · 05 abril 2024</span>
+              <p>
+                La ansiedad puede aparecer de muchas formas: preocupación constante, tensión física, dificultad para concentrarse o sensación de estar siempre alerta. Afortunadamente, existen técnicas simples que puedes aplicar diariamente para regular tu sistema nervioso y recuperar calma.
+
+                Una de las más efectivas es la respiración diafragmática: inhalar de manera profunda expandiendo el abdomen y exhalar lentamente. Esto envía señales de seguridad al cerebro y reduce el estrés de inmediato.
+
+                Otra técnica útil es la atención plena (mindfulness). Consiste en enfocar tu mente en el momento presente, ya sea observando tu respiración, tus sensaciones corporales o el entorno. También puedes practicar “descargas mentales”, escribiendo todo lo que te preocupa para liberar tensión.
+
+                Aplicar pausas de 2 a 5 minutos durante el día puede cambiar completamente tu estado emocional. Son herramientas pequeñas, pero con efectos enormes cuando se practican de manera consistente.
+              </p>
+            </div>
+          </article>
+        </a>
+        <!-- Noticia 5 --> 
+        <a class="noticia-link" data-id="5">
+          <article class="noticia">
+            <img src="image/anonimo1.png" alt="Avatar autora" class="avatar" />
+            <div>
+              <h3>Reconecta contigo: hábitos para fortalecer tu autoestima</h3>
+              <span class="meta">Valeria · 22 marzo 2024</span>
+              <p>
+                La autoestima no surge de un día para otro; se construye a través de pequeños hábitos que refuerzan la relación que tienes contigo misma. Reconectar con tu esencia implica reconocerte como alguien valiosa, digna y capaz, independientemente de lo que otros piensen o esperen.
+
+                Un hábito poderoso es la autocompasión: tratarte con la misma suavidad con la que tratarías a alguien que amas. También puedes practicar afirmaciones conscientes, recordarte tus logros, escribir tus avances diarios o permitirte cometer errores sin castigarte.
+
+                Otro hábito clave es rodearte de personas que te nutran, te respeten y te impulsen a crecer. Tu ambiente influye profundamente en cómo te ves a ti misma.
+
+                Cuando comienzas a elegirte, a escucharte y a priorizar lo que te hace bien, tu autoestima se fortalece y tu vida empieza a alinearse con quien realmente eres.
+              </p>
+            </div>
+          </article>
+        </a>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER GENERAL QUE YA USAS ===== -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo Ampara"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="/Documentos/terminosycondiciones.pdf"
+              >Términos y Condiciones</a
+            >
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="YouTube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

@@ -1,114 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ampara</title>
-        <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-        />
-        <link rel="stylesheet" href="styles.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Pie.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
 
-    <body>
-        <section class = "texto-motivacional">
-            <div class="texto-motivacional-contenido">
+      <div class="hero-content">
+        <!-- Barra superior -->
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">❤</span>
+            <span class="logo-text">AMPARA</span>
+          </div>
+        </nav>
 
-                <div class = "logo">
-                    <div class="logo-imagen">
-                        <img src="img/logoAmpara.png" alt="logo">
-                    </div>
-                    <div class = "logo-texto">
-                        <p>AMPARA</p>
-                    </div>
-                </div>
+        <!-- Texto principal -->
+        <div class="hero-text">
+          <h1>
+            Acompañamos tu salida del<br />
+            riesgo con apoyo seguro para<br />
+            actuar, protegerte y seguir<br />
+            adelante.
+          </h1>
+        </div>
+      </div>
+    </header>
 
-                <div class = "mensaje">
-                    <p>
-                        Acompañamos tu salida del <br>
-                        riesgo con apoyo seguro para <br>
-                        actuar, protegerte y seguir <br>
-                        adelante.
-                    </p>
-                </div>
+    <!-- SECCIÓN NOSOTROS -->
+    <section class="nosotros-section">
+      <div class="nosotros-card">
+        <h2>Nosotros</h2>
+        <p>
+          Acompañamos a mujeres con un espacio seguro con información,
+          especialistas y rutas de ayuda frente a la violencia.
+        </p>
+        <a href="login.html" class="btn-primary">Ir a la plataforma</a>
+      </div>
+    </section>
 
-            </div>
-        </section>
+    <!-- SERVICIOS -->
+    <section class="servicios-section">
+      <h2>Servicios</h2>
 
-        <section class = "Nosotros">
-            <div class = "nosotros-contenido">
-                <h2>Nosotros</h2>
+      <div class="servicios-grid">
+        <div class="servicio-item">
+          <div class="servicio-icon">
+            <img src="icons/equipo-medico.png" alt="Icono apoyo psicologico" />
+          </div>
+          <h3>Apoyo Psicológico</h3>
+        </div>
 
-                <p>Acompañamos a mujeres con un espacio seguro con información, <br>
-                    especialistas y rutas de ayuda frente a la violencia.</p>
+        <div class="servicio-item">
+          <div class="servicio-icon">
+            <img src="icons/charla.png" alt="foro anonimo" />
+          </div>
+          <h3>Foro anónimo de ayuda</h3>
+        </div>
+      </div>
+    </section>
 
-                <div class = "boton-plataforma">
-                    <a href="registro/registro.html">Ir a la plataforma</a>
-                </div>
-            </div>
-        </section>
-        
-        <section class = "servicios">
-            <div class = "servicios-contenido">
-                <h2>
-                    Servicios
-                </h2>
-                <div class = "servicios-brindados">
-                    <div class = "servicio-apoyo">
-                        <img src="img/avatarPsico.png" alt ="apoyo psicologico">
-                        <p>
-                            Apoyo Psicológico
-                        </p>
-                    </div>
-                    <div class = "servicio-foro">
-                        <img src="img/foro-morado.png" alt = "icono foro">
-                        <p>
-                            Foro anónimo de <br>ayuda
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- TESTIMONIOS -->
+    <section class="testimonios-section">
+      <h2>Testimonios</h2>
+      <div class="testimonios-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonio-card">
+          <div class="testimonio-video">
+            <iframe
+              src="https://www.youtube.com/embed/f5kuvd2U4As?si=NiqETqxnETeQLjyi"
+              title="Testimonio 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="testimonio-nombre">Mujeres que inspiran</p>
+          <p class="testimonio-resumen">
+            Mujeres que comparten cómo enfrentaron distintas formas de violencia
+            y cómo iniciaron su proceso de recuperación.
+          </p>
+        </div>
 
-        <section class = "testimonios">
-            <div class = "testimonios-contenido">
+        <!-- Testimonio 2 -->
+        <div class="testimonio-card">
+          <div class="testimonio-video">
+            <iframe
+              src="https://www.youtube.com/embed/KrZQqFMA950?si=uWsh_bD8H7OwwrYT"
+              title="Testimonio 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="testimonio-nombre">Testimonio de Ana Bella</p>
+          <p class="testimonio-resumen">
+            Ana Bella relata su experiencia de violencia por parte de su esposo
+            y cómo transformó su historia en apoyo para otras mujeres.
+          </p>
+        </div>
 
-                <h2>Testimonios</h2>
+        <!-- Testimonio 3 -->
+        <div class="testimonio-card">
+          <div class="testimonio-video">
+            <iframe
+              src="https://www.youtube.com/embed/XdHMuzMTZoU?si=cN8y-4dxfMVX5Ap2"
+              title="Testimonio 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="testimonio-nombre">Testimonio de Ana</p>
+          <p class="testimonio-resumen">
+            Ana cuenta cómo, gracias al apoyo recibido, pudo salir del ciclo de
+            violencia y reconstruir su vida con seguridad.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                <div class = "testimonios-textos">
-                    <div class = "testimonio1">
-                        <p>
-                            testimonio1
-                        </p>
-                    </div>
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="faq-section">
+      <h2>Preguntas frecuentes</h2>
 
-                    <div class = "testimonio2">
-                        <p>
-                            testimonio2
-                        </p>
-                    </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Qué es AMPARA?</summary>
+          <p>
+            AMPARA es una plataforma de apoyo seguro para mujeres que viven
+            situaciones de violencia, brindando acompañamiento psicológico y
+            rutas de ayuda.
+          </p>
+        </details>
 
-                    <div class = "testimonio3">
-                        <p>
-                            testimonio3
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <details class="faq-item">
+          <summary>¿Qué servicios ofrece AMPARA?</summary>
+          <p>
+            Ofrece apoyo psicológico, un foro anónimo de ayuda, materiales
+            informativos y acceso a redes de soporte.
+          </p>
+        </details>
 
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="politica/politica.html">Políticas de privacidad</a>
-                <a href="terminos/terminos.html">Términos</a>
-            </div>
+        <details class="faq-item">
+          <summary>¿Qué servicios ofrece AMPARA?</summary>
+          <p>
+            Puedes acceder a la plataforma desde cualquier dispositivo con
+            conexión a internet, de forma gratuita.
+          </p>
+        </details>
 
-            <div class="footer-redes">
-                <a href="#"><img src="img/facebook.png" alt="facebook" /></a>
-                <a href="#"><img src="img/twitter.png" alt="twitter" /></a>
-                <a href="#"><img src="img/instagram.png" alt="instagram" /></a>
-                <a href="#"><img src="img/youtube.png" alt="youTube" /></a>
-            </div>
-        </footer>
-    </body>
+        <details class="faq-item">
+          <summary>¿Qué servicios ofrece AMPARA?</summary>
+          <p>
+            La información que compartes se mantiene en estricta
+            confidencialidad y se protege tu identidad.
+          </p>
+        </details>
+      </div>
+
+      <div class="faq-cta">
+        <a href="login.html" class="btn-primary">Ir a la plataforma</a>
+      </div>
+    </section>
+
+    <!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

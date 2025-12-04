@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Mi cuenta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Reutilizamos estilos del header + estilos propios -->
+
+    <link rel="stylesheet" href="ampara.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="mi_cuenta.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="image/logo_morado.png" class="nav-logo" alt="Logo Ampara" />
+      </div>
+
+      <nav class="nav-links">
+        <!-- AQUÍ CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+        <a href="#" class="btn-sos">SOS</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="articulo_usuario.html">Articulos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </nav>
+
+      <div class="nav-right">
+        <!-- opcional: botón cuenta -->
+        <a href="#" class="btn-cuenta">Mi cuenta</a>
+
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel">
+        <div class="mobile-menu-header">
+          <div class="user-avatar">F</div>
+
+          <div class="user-info">
+            <p class="user-name">Fab Q</p>
+            <a href="mi_cuenta.html" class="user-link">Ver mi perfil</a>
+          </div>
+
+          <button class="btn-close" aria-label="Cerrar menú">✕</button>
+        </div>
+
+        <nav class="mobile-menu-links">
+          <!-- AQUÍ TAMBIÉN CAMBIAS LOS LINKS SEGÚN LA PÁGINA -->
+
+          <a href="servicios.html">Servicios</a>
+          <a href="#">Articulos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO MI CUENTA -->
+    <main class="account-page">
+      <section class="account-layout">
+        <!-- Lado izquierdo -->
+        <aside class="account-sidebar">
+          <div class="sidebar-hello">
+            <p class="hello-label">¡HOLA,</p>
+            <p class="hello-name">FAB!</p>
+          </div>
+
+          <nav class="account-menu">
+            <button class="account-menu-item is-active">
+              <span class="icon">👤</span>
+              <a href="mi_cuenta.html">Perfil</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">📜</span>
+              <a href="historial.html">Historial</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">💜</span>
+              <a href="favoritos.html">Favoritos</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔔</span>
+              <a href="">Notificaciones</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🛠</span>
+              <a href="reportar.html">Reportar un problema</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔄</span>
+              <a href="login.html">Cerrar sesión</a>
+            </button>
+
+            <button class="account-menu-item danger">
+              <span class="icon">✖</span>
+              <a href="eliminarCuenta.html">Eliminar cuenta</a>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Lado derecho -->
+        <section class="account-main">
+          <div class="account-header">
+            <button
+              class="btn-back"
+              onclick="window.location.href='contacto_emergencia.html'"
+            >
+              <img src="icons/atras.png" alt="Volver" />
+            </button>
+
+            <h1 class="account-title">Contacto registrado</h1>
+          </div>
+
+          <!-- Bloque datos personales -->
+          <article class="account-card" id="card-datos">
+            <header class="account-card-header">
+              <h2>Datos personales</h2>
+              <button class="btn-outline edit-btn" data-target="card-datos">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Nombre</p>
+                <p class="field-value" data-field="nombre">Jefferson</p>
+                <input
+                  class="field-input"
+                  data-input="nombre"
+                  type="text"
+                  value="Jefferson"
+                />
+              </div>
+
+              <div class="field-group">
+                <p class="field-label">Apellido</p>
+                <p class="field-value" data-field="apellido">C.</p>
+                <input
+                  class="field-input"
+                  data-input="apellido"
+                  type="text"
+                  value="C."
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque correo -->
+          <article class="account-card" id="card-correo">
+            <header class="account-card-header">
+              <h2>Correo electrónico</h2>
+              <!-- OJO: tiene clase edit-btn y data-target -->
+              <button class="btn-outline edit-btn" data-target="card-correo">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Correo</p>
+
+                <!-- Texto normal -->
+                <p class="field-value" data-field="correo">
+                  jeffersonC09@gmail.com
+                </p>
+
+                <!-- Input para modo edición -->
+                <input
+                  class="field-input"
+                  data-input="correo"
+                  type="email"
+                  value="jeffersonC0909@gmail.com"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque contraseña -->
+          <article class="account-card" id="card-pass">
+            <header class="account-card-header">
+              <h2>Contraseña</h2>
+              <!-- También usa edit-btn -->
+              <button class="btn-outline edit-btn" data-target="card-pass">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Contraseña</p>
+
+                <!-- Texto que se muestra (enmascarado) -->
+                <p class="field-value" data-field="password">********</p>
+
+                <!-- Input real en modo edición -->
+                <input
+                  class="field-input"
+                  data-input="password"
+                  type="password"
+                  value=""
+                  placeholder="Ingresa tu nueva contraseña"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque eliminar contacto -->
+          <article class="account-card danger-card">
+            <header class="account-card-header">
+              <div class="account-card-title">
+                <h2>Eliminar contacto</h2>
+                <p class="field-value">
+                  Si eliminas este contacto ya no se usará como contacto de
+                  emergencia.
+                </p>
+              </div>
+
+              <button class="btn-danger" id="btn-delete-contact">
+                Eliminar contacto
+              </button>
+            </header>
+          </article>
+        </section>
+      </section>
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo Ampara"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf">
+              Política de Privacidad
+            </a>
+            <a href="/Documentos/terminosycondiciones.pdf">
+              Términos y Condiciones
+            </a>
+            <a href="/Documentos/LeyProteccionDatos.pdf">
+              Protección de Datos
+            </a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="menu_hamburguesa.js"></script>
+    <script src="mi_cuenta.js"></script>
+  </body>
+</html>

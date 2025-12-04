@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA – Mi cuenta psicólogo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales + propios -->
+    <link rel="stylesheet" href="psicologo.css" />
+    <link rel="stylesheet" href="eliminarCuenta.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+    <link rel="stylesheet" href="mi_cuenta2.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <!-- IZQUIERDA: hamburguesa + logo -->
+      <div class="nav-left">
+        <!-- Botón hamburguesa (solo se ve en móvil) -->
+        <button
+          class="btn-burger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Logo clickeable que lleva al home del especialista -->
+        <a href="psicologo.html" class="nav-logo-link">
+          <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+        </a>
+      </div>
+
+      <!-- CENTRO: links de navegación (solo desktop) -->
+      <nav class="nav-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+
+      <!-- DERECHA: Mi cuenta -->
+      <div class="nav-right">
+        <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+      </div>
+    </header>
+    <!-- MENÚ MÓVIL -->
+    <aside class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <div class="user-avatar">F</div>
+        <div class="user-info">
+          <span class="user-name">Fab Q</span>
+          <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
+        </div>
+
+        <button class="btn-close" id="closeMenu">✕</button>
+      </div>
+
+      <nav class="mobile-menu-links">
+        <a href="pacientes.html">Pacientes</a>
+        <a href="articulo_psicologo.html">Artículos</a>
+        <a href="nosotros2.html">Nosotros</a>
+      </nav>
+    </aside>
+
+    <div class="planes-wrapper">
+        <!-- Flecha afuera, sobre el fondo lila -->
+        <button
+          class="btn-back-planes"
+          onclick="window.location.href='psicologo.html'"
+          aria-label="Volver"
+        >
+          <img src="icons/atras.png" alt="Volver" />
+        </button>
+
+
+    <!-- CONTENIDO MI CUENTA PSICÓLOGO -->
+    <main class="account-page">
+      <section class="account-layout">
+        <!-- Lado izquierdo -->
+        <aside class="account-sidebar">
+          <!-- CARD PLAN PREMIUM SELECCIONABLE -->
+          <button
+            type="button"
+            class="plan-card plan-card-select"
+            id="plan-premium"
+            onclick="window.location.href='planes.html'"
+          >
+            <h2 class="plan-title">
+              PLAN<br />
+              PREMIUM<br />
+              AMPARA
+            </h2>
+            <p class="plan-text">
+              consulta los planes actuales y obten beneficios por cada uno
+            </p>
+          </button>
+
+          <!-- Puedes cambiar el saludo según el nombre del psicólogo -->
+          <div class="sidebar-hello">
+            <p class="hello-label">¡HOLA,</p>
+            <p class="hello-name">DRA. ANA!</p>
+          </div>
+
+          <!-- Opciones de cuenta para psicólogo -->
+          <nav class="account-menu">
+            <button class="account-menu-item is-active">
+              <span class="icon">👤</span>
+              <a href="mi_cuenta2.html">Perfil</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔔</span>
+              <a href="">Notificaciones</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🛠</span>
+              <a href="reportar2.html">Reportar un problema</a>
+            </button>
+
+            <button class="account-menu-item">
+              <span class="icon">🔄</span>
+              <a href="login.html">Cerrar sesión</a>
+            </button>
+
+            <button class="account-menu-item danger">
+              <span class="icon">✖</span>
+              <a href="eliminarCuenta2.html">Eliminar cuenta</a>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Lado derecho -->
+        <section class="account-main">
+          <h1 class="account-title">Mi perfil profesional</h1>
+
+          <!-- Bloque datos profesionales -->
+          <article class="account-card" id="card-datos">
+            <header class="account-card-header">
+              <h2>Datos profesionales</h2>
+              <button class="btn-outline edit-btn" data-target="card-datos">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Nombre</p>
+                <p class="field-value" data-field="nombre">Ana</p>
+                <input
+                  class="field-input"
+                  data-input="nombre"
+                  type="text"
+                  value="Ana"
+                />
+              </div>
+
+              <div class="field-group">
+                <p class="field-label">Apellido</p>
+                <p class="field-value" data-field="apellido">Pérez</p>
+                <input
+                  class="field-input"
+                  data-input="apellido"
+                  type="text"
+                  value="Pérez"
+                />
+              </div>
+
+              <div class="field-group">
+                <p class="field-label">Especialidad</p>
+                <p class="field-value" data-field="especialidad">
+                  Psicología Clínica
+                </p>
+                <input
+                  class="field-input"
+                  data-input="especialidad"
+                  type="text"
+                  value="Psicología Clínica"
+                />
+              </div>
+
+              <div class="field-group">
+                <p class="field-label">N° de colegiatura</p>
+                <p class="field-value" data-field="colegiatura">C.Ps.P 12345</p>
+                <input
+                  class="field-input"
+                  data-input="colegiatura"
+                  type="text"
+                  value="C.Ps.P 12345"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque correo -->
+          <article class="account-card" id="card-correo">
+            <header class="account-card-header">
+              <h2>Correo profesional</h2>
+              <button class="btn-outline edit-btn" data-target="card-correo">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Correo</p>
+                <p class="field-value" data-field="correo">
+                  ana.psicologa@ampara.com
+                </p>
+                <input
+                  class="field-input"
+                  data-input="correo"
+                  type="email"
+                  value="ana.psicologa@ampara.com"
+                />
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloque contraseña -->
+          <article class="account-card" id="card-pass">
+            <header class="account-card-header">
+              <h2>Contraseña</h2>
+              <button class="btn-outline edit-btn" data-target="card-pass">
+                Editar
+              </button>
+            </header>
+
+            <div class="account-card-body">
+              <div class="field-group">
+                <p class="field-label">Contraseña</p>
+                <p class="field-value" data-field="password">********</p>
+                <input
+                  class="field-input"
+                  data-input="password"
+                  type="password"
+                  value=""
+                  placeholder="Ingresa tu nueva contraseña"
+                />
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+<!-- PIE DE PAGINA -->
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales con íconos personalizados -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="menu_hamburguesa.js"></script>
+    <script src="mi_cuenta.js"></script>
+  </body>
+</html>

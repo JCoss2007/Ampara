@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmación de cuenta - Ampara</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="confirmacion.css" />
+    <link rel="stylesheet" href="Pie.css" />
+  </head>
+
+  <body>
+    <header class="registro-header">
+      <a href="registro_usuario.html" class="back-arrow">←</a>
+
+      <div class="registro-header-inner">
+        <h1>Cuenta creada con éxito</h1>
+
+        <div class="progress-steps">
+          <div class="progress-step">
+            <span class="step-circle">1</span>
+            <span class="step-label">Tipo de usuario</span>
+          </div>
+
+          <div class="progress-step">
+            <span class="step-circle">2</span>
+            <span class="step-label">Datos de registro</span>
+          </div>
+
+          <div class="progress-step active">
+            <span class="step-circle">3</span>
+            <span class="step-label">Confirmación</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="confirm-main">
+      <section class="confirm-container">
+        <div class="confirm-card">
+          <img src="icons/checked.png" alt="Check" class="confirm-icon" />
+
+          <h2>¡Bienvenida a Ampara!</h2>
+
+          <p class="confirm-text">
+            Tu cuenta ha sido creada exitosamente. Ahora puedes ingresar a la
+            plataforma y empezar a usar todos los servicios.
+          </p>
+
+          <button class="btn-primary" onclick="window.location='login.html'">
+            Ir al inicio de sesión
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="icons/logo_ampara_footer.png" class="footer-logo" />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="Documentos/Política de Privacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="Documentos/TÉRMINOS Y CONDICIONES.pdf"
+              >Términos y Condiciones</a
+            >
+            <a href="Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"><img src="icons/facebook.png" class="social-icon" /></a>
+            <a href="#"
+              ><img src="icons/instagram.png" class="social-icon"
+            /></a>
+            <a href="#"><img src="icons/youtube.png" class="social-icon" /></a>
+            <a href="#"><img src="icons/twitter.png" class="social-icon" /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

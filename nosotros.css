@@ -1,0 +1,273 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6eefc;
+  color: #2b2140;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Logo desktop vs móvil */
+.nav-logo-desktop {
+  display: inline-flex;
+}
+
+.nav-logo-mobile {
+  display: none; /* se mostrará solo en móvil */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 175px;
+  height: auto;
+}
+
+.nav-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #482983;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1d1533;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  background-color: rgba(72, 41, 131, 0.12);
+  color: #482983;
+}
+
+/* SOS de la navbar (desktop) */
+.btn-sos {
+  background-color: #ff5b7f;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-sos-desktop {
+  display: inline-block;
+}
+
+.btn-cuenta {
+  background-color: #482983;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Burger oculto en desktop */
+.btn-burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* SOS móvil (se muestra solo en mobile) */
+.nav-sos-mobile {
+  display: none;
+}
+/* =============== */
+/*     HERO        */
+/* =============== */
+
+.nosotros-hero {
+  position: relative;
+  min-height: 650px;
+  background-image: url("image/grupo-mujeres.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nosotros-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(72, 41, 131, 0.85),
+    rgba(72, 41, 131, 0.92)
+  );
+}
+
+.nosotros-hero-inner {
+  max-width: 1200px;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 4rem 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* FLECHA + TÍTULO */
+.nosotros-hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nosotros-hero-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.back-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* CONTENIDO INTERNO */
+.nosotros-hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: flex-start; /* 🔥 antes estaba center */
+}
+
+.nosotros-text-main p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* TARJETAS DERECHA */
+.nosotros-side-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nosotros-card {
+  background-color: #6a3fb0;
+  padding: 1.6rem 1.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================== */
+/*     CUERPO BAJO DEL HERO    */
+/* =========================== */
+
+.nosotros-body {
+  background-color: #482983;
+  padding: 1.5rem 0 0; /* poquitito espacio arriba, nada abajo */
+  min-height: 0; /* sin altura mínima fija */
+}
+
+.nosotros-body-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =============== */
+/*   RESPONSIVE    */
+/* =============== */
+
+@media (max-width: 1024px) {
+  .nosotros-hero-inner {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .nosotros-hero-content {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .nosotros-side-cards {
+    width: 100%;
+  }
+
+  .nosotros-text-main p {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nosotros-hero-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .nosotros-hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nosotros-text-main p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .nosotros-card {
+    font-size: 0.9rem;
+    padding: 1.3rem 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros-hero-inner {
+    padding: 2rem 1.2rem 3rem;
+  }
+
+  .nosotros-hero-header h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AMPARA - Llamadas psicólogo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuente -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos globales que ya usas -->
+    <link rel="stylesheet" href="psicologo.css" />
+    <link rel="stylesheet" href="Pie.css" />
+    <link rel="stylesheet" href="menu_hamburguesa.css" />
+
+    <!-- Estilos específicos de esta pantalla -->
+    <link rel="stylesheet" href="pacientes_llamada.css" />
+  </head>
+
+  <body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <!-- IZQUIERDA: hamburguesa + logo -->
+    <div class="nav-left">
+      <!-- Botón hamburguesa (solo se ve en móvil) -->
+      <button
+        class="btn-burger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Logo clickeable que lleva al home del especialista -->
+      <a href="psicologo.html" class="nav-logo-link">
+        <img src="image/logo_morado.png" alt="Logo Ampara" class="nav-logo" />
+      </a>
+    </div>
+
+    <!-- CENTRO: links de navegación (solo desktop) -->
+    <nav class="nav-links">
+      <a href="pacientes.html">Pacientes</a>
+      <a href="articulo_psicologo.html">Artículos</a>
+      <a href="nosotros2.html">Nosotros</a>
+    </nav>
+
+    <!-- DERECHA: Mi cuenta -->
+    <div class="nav-right">
+      <a href="mi_cuenta2.html" class="btn-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+  <!-- MENÚ MÓVIL -->
+  <aside class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="user-avatar">F</div>
+      <div class="user-info">
+        <span class="user-name">Fab Q</span>
+        <a href="mi_cuenta2.html" class="user-link">Ver mi perfil</a>
+      </div>
+
+      <button class="btn-close" id="closeMenu">✕</button>
+    </div>
+
+    <nav class="mobile-menu-links">
+      <a href="pacientes.html">Pacientes</a>
+      <a href="articulo_psicologo.html">Artículos</a>
+      <a href="nosotros2.html">Nosotros</a>
+    </nav>
+  </aside>
+    <!--hasta aqui-->
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="app-wrapper">
+      <a href="psicologo.html" class="back-floating" aria-label="Volver al panel">
+    <img src="icons/atras.png" alt="Volver" />
+  </a>
+      <div class="app-card">
+        <!-- ========== SIDEBAR ========== -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="sidebar-icon"></div>
+            <span class="sidebar-title">Solicitudes</span>
+          </div>
+
+          <nav class="sidebar-menu">
+            <button class="menu-item menu-item-active">
+              <span>Todos</span>
+            </button>
+
+            <button class="menu-item">
+              <span>Llamada</span>
+              <span class="menu-badge">5</span>
+            </button>
+
+            <button class="menu-item">
+              <span>Videollamada</span>
+              <span class="menu-badge">1</span>
+            </button>
+
+            <button class="menu-item">
+              <span>Urgentes</span>
+              <span class="menu-badge">1</span>
+            </button>
+
+            <button class="menu-item">
+              <span>No leídos</span>
+              <span class="menu-badge">6</span>
+            </button>
+          </nav>
+        </aside>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main class="main-content">
+          <!-- LISTA DE SOLICITUDES -->
+          <section class="thread-list">
+            <!-- Buscador -->
+            <div class="search-box">
+              <span class="search-icon">
+                <img src="icons/lupa.png" alt="Buscar" />
+              </span>
+              <input
+                type="text"
+                placeholder="Buscar"
+                aria-label="Buscar conversaciones"
+              />
+            </div>
+
+            <!-- Items -->
+            <div class="thread-items">
+              <!-- tipo = mensaje -->
+              <article
+                class="thread-item"
+                data-tipo="mensaje"
+                data-nombre="Anónimo – 140"
+              >
+                <div class="avatar-circle"></div>
+                <div class="thread-text">
+                  <h3>Anónimo – 140</h3>
+                  <p>Mensaje</p>
+                </div>
+              </article>
+
+              <!-- tipo = llamada -->
+
+              <article
+                class="thread-item thread-item-active"
+                data-tipo="llamada"
+                data-nombre="Anónimo – 141"
+              >
+                <div class="avatar-circle"></div>
+                <div class="thread-text">
+                  <h3>Anónimo – 141</h3>
+                  <p>Llamada</p>
+                </div>
+              </article>
+
+              <article
+                class="thread-item"
+                data-tipo="mensaje"
+                data-nombre="Anónimo – 142"
+              >
+                <div class="avatar-circle"></div>
+                <div class="thread-text">
+                  <h3>Anónimo – 142</h3>
+                  <p>Mensaje</p>
+                </div>
+              </article>
+
+              <!-- tipo = videollamada -->
+              <article
+                class="thread-item"
+                data-tipo="videollamada"
+                data-nombre="Anónimo – 143"
+              >
+                <div class="avatar-circle"></div>
+                <div class="thread-text">
+                  <h3>Anónimo – 143</h3>
+                  <p>Videollamada</p>
+                </div>
+              </article>
+
+              <article
+                class="thread-item thread-item-active"
+                data-tipo="llamada"
+                data-nombre="Anónimo – 144"
+              >
+                <div class="avatar-circle"></div>
+                <div class="thread-text">
+                  <h3>Anónimo – 144</h3>
+                  <p>Llamada</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- PANEL DE LLAMADA -->
+          <section class="call-panel">
+            <!-- Encabezado -->
+            <header class="call-header">
+              <div class="call-header-left">
+                <div class="call-avatar"></div>
+                <div class="call-info">
+                  <p class="call-name" id="callName">Anónimo – 144</p>
+                  <p class="call-type" id="callType">Llamada de voz</p>
+                </div>
+              </div>
+
+              <div class="call-status">
+                <span class="status-dot"></span>
+                <span id="callStatusText">En curso</span>
+              </div>
+            </header>
+
+            <!-- Cuerpo de la llamada -->
+            <div class="call-body">
+              <div class="call-timer" id="callTimer">00:45</div>
+
+              <p class="call-note">
+                Recuerda hablar con un tono tranquilo y validar sus emociones.
+              </p>
+
+              <ul class="call-guidelines">
+                <li>No interrumpas mientras la paciente habla.</li>
+                <li>
+                  Refuerza que pedir ayuda es un acto de valentía, no de
+                  debilidad.
+                </li>
+                <li>
+                  Evita presionar decisiones, ofrece opciones y acompaña su
+                  proceso.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Controles -->
+            <div class="call-controls">
+              <button class="btn-round btn-muted" type="button">
+                🔇
+                <span>Silenciar</span>
+              </button>
+
+              <button class="btn-round btn-end" type="button">
+                📞
+                <span>Finalizar llamada</span>
+              </button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <section id="footer">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo y nombre de sitio -->
+          <div class="footer-brand">
+            <img
+              src="icons/logo_ampara_footer.png"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <small>© 2025 Todos los derechos reservados</small>
+          </div>
+
+          <!-- Enlaces legales -->
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <a href="/Documentos/politicaprivacidad.pdf"
+              >Política de Privacidad</a
+            >
+            <a href="/Documentos/terminosycondiciones.pdf"
+              >Términos y Condiciones</a
+            >
+            <a href="/Documentos/LeyProteccionDatos.pdf">Protección de Datos</a>
+          </div>
+
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <a href="#"
+              ><img src="icons/facebook.png" alt="Facebook" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="icons/instagram.png"
+                alt="Instagram"
+                class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/youtube.png" alt="Youtube" class="social-icon"
+            /></a>
+            <a href="#"
+              ><img src="icons/twitter.png" alt="Twitter" class="social-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- JS opcional para que al hacer clic en una "Llamada" cambie el panel -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".thread-item");
+        const callName = document.getElementById("callName");
+        const callType = document.getElementById("callType");
+
+        items.forEach((item) => {
+          item.addEventListener("click", () => {
+            // marcar item activo
+            items.forEach((i) => i.classList.remove("thread-item-active"));
+            item.classList.add("thread-item-active");
+
+            const tipo = item.dataset.tipo;
+            const nombre = item.dataset.nombre || "Paciente anónimo";
+
+            // solo cambiamos el panel si es llamada / videollamada
+            if (tipo === "llamada") {
+              callName.textContent = nombre;
+              callType.textContent = "Llamada de voz";
+            } else if (tipo === "videollamada") {
+              callName.textContent = nombre;
+              callType.textContent = "Videollamada";
+            } else {
+              window.location.href = "pacientes.html";
+            }
+          });
+        });
+      });
+    </script>
+    <script src="menu_hamburguesa.js"></script>
+  </body>
+</html>
